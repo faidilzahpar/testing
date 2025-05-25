@@ -1,0 +1,87 @@
+.min-vh-custom {
+  min-height: 100vh; /* Default untuk layar besar */
+}
+
+@media (max-width: 576px) { /* Untuk sm (≤576px) */
+  .min-vh-custom {
+    min-height: 50vh;
+  }
+}
+
+.icon-box {
+  background: white; /* Oranye transparan */
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.icon-box i {
+  font-size: 40px;
+  color: #fd7e14; /* Warna utama */
+  transition: transform 0.3s, color 0.3s;
+}
+
+.icon-box:hover {
+  transform: translateY(-5px);
+  background: #e96a04;
+}
+
+.icon-box:hover i {
+  transform: scale(1.1);
+  color: white;
+}
+
+.bg-orange {
+  background-color: #fd7e14;
+}
+
+.text-orange {
+  color: #fd7e14;
+}
+
+.btn-orange {
+  background-color: #fd7e14 !important;
+}
+
+.btn-orange:hover {
+  background-color: #e96a04 !important;
+}
+
+.nav-link {
+  position: relative; /* Agar efek tetap berada di dalam */
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fd7e14;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.1s ease-in-out;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+}
+
+.sosmed {
+  transition: all 0.3s ease;
+}
+
+.sosmed:hover {
+  color: #e96a04;
+  transform: translateY(-5px);
+}
+
+.contact {
+  transition: all 0.3s ease;
+}
+
+.contact:hover {
+  color: #fd7e14 !important;
+  transform: scale(1.05);
+}
