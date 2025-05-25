@@ -83,3 +83,6 @@ function hitung(operasi) {
 
 // Inisialisasi default
 renderInput();
+
+
+
