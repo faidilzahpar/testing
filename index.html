@@ -24,7 +24,7 @@
 
       <!-- Dropdown Kategori Member -->
       <div id="memberCategoryOptions" class="mb-4 hidden">
-        <select id="memberFilter" class="border border-gray-300 rounded px-4 py-2 mb-4 w-3xs bg-gray-200">
+        <select id="memberFilter" class="border border-gray-300 rounded px-4 py-2 w-3xs bg-gray-200">
           <option disabled selected>-- Pilih Kategori Member --</option>
           <option value="all">All Member</option>
           <option value="active">Active Member</option>
@@ -34,7 +34,7 @@
 
       <!-- Dropdown Generasi -->
       <div id="memberGenerationOptions" class="mb-4 hidden">
-        <select id="memberGenerationFilter" class="border border-gray-300 rounded px-4 py-2 mb-4 w-3xs bg-gray-200">
+        <select id="memberGenerationFilter" class="border border-gray-300 rounded px-4 py-2 w-3xs bg-gray-200">
           <option disabled selected>-- Pilih Generasi --</option>
           <option value="gen1">Generasi 1</option>
           <option value="gen2">Generasi 2</option>
@@ -69,17 +69,20 @@
 
     <script>
       const tierType = document.getElementById("tierType");
-      const tierOptions = document.getElementById("tierOptions");
+      const memberCategoryOptions = document.getElementById("memberCategoryOptions");
+      const memberGenerationOptions = document.getElementById("memberGenerationOptions");
       const songOptions = document.getElementById("songOptions");
 
       tierType.addEventListener("change", function () {
-        // Sembunyikan semua opsi tambahan dulu
-        tierOptions.classList.add("hidden");
+        // Sembunyikan semua
+        memberCategoryOptions.classList.add("hidden");
+        memberGenerationOptions.classList.add("hidden");
         songOptions.classList.add("hidden");
 
-        // Tampilkan sesuai pilihan
+        // Tampilkan jika tipe tier adalah "member"
         if (this.value === "member") {
-          tierOptions.classList.remove("hidden");
+          memberCategoryOptions.classList.remove("hidden");
+          memberGenerationOptions.classList.remove("hidden");
         } else if (this.value === "setlistSong") {
           songOptions.classList.remove("hidden");
         }
