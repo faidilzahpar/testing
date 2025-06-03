@@ -51,12 +51,18 @@
     <script>
       const tierType = document.getElementById("tierType");
       const tierOptions = document.getElementById("tierOptions");
+      const songOptions = document.getElementById("songOptions");
 
       tierType.addEventListener("change", function () {
+        // Sembunyikan semua opsi tambahan dulu
+        tierOptions.classList.add("hidden");
+        songOptions.classList.add("hidden");
+
+        // Tampilkan sesuai pilihan
         if (this.value === "member") {
           tierOptions.classList.remove("hidden");
-        } else {
-          tierOptions.classList.add("hidden");
+        } else if (this.value === "setlistSong") {
+          songOptions.classList.remove("hidden");
         }
       });
     </script>
