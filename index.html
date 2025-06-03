@@ -23,8 +23,8 @@
       </select>
 
       <!-- Dropdown Kategori Member -->
-      <div id="memberCategoryOptions" class="mb-4 hidden">
-        <select id="memberFilter" class="border border-gray-300 rounded px-4 py-2 w-3xs bg-gray-200">
+      <div id="memberCategoryOptions" class="transition-all duration-300 ease-in-out opacity-0 max-h-0 overflow-hidden scale-95">
+        <select id="memberFilter" class="mb-4 border border-gray-300 rounded px-4 py-2 w-3xs bg-gray-200">
           <option disabled selected>-- Select Member Category --</option>
           <option value="all">All Member</option>
           <option value="active">Active Member</option>
@@ -33,8 +33,8 @@
       </div>
 
       <!-- Dropdown Generasi -->
-      <div id="memberGenerationOptions" class="mb-4 hidden">
-        <select id="memberGenerationFilter" class="border border-gray-300 rounded px-4 py-2 w-3xs bg-gray-200">
+      <div id="memberGenerationOptions" class="transition-all duration-300 ease-in-out opacity-0 max-h-0 overflow-hidden scale-95">
+        <select id="memberGenerationFilter" class="mb-4 border border-gray-300 rounded px-4 py-2 w-3xs bg-gray-200">
           <option disabled selected>-- Select Generation --</option>
           <option value="gen1">All Generation</option>
           <option value="gen1">Generation 1</option>
@@ -55,8 +55,8 @@
       </div>
 
       <!-- Dropdown Setlist -->
-      <div id="songOptions" class="mb-4 hidden">
-        <select id="songFilter" class="border border-gray-300 rounded px-4 py-2 w-3xs bg-gray-200">
+      <div id="songOptions" class="transition-all duration-300 ease-in-out opacity-0 max-h-0 overflow-hidden scale-95">
+        <select id="songFilter" class="mb-4 border border-gray-300 rounded px-4 py-2 w-3xs bg-gray-200">
           <option disabled selected>-- Select Setlist --</option>
           <option value="pajama">Pajama Drive</option>
           <option value="rkj">Aturan Anti Cinta</option>
@@ -83,23 +83,28 @@
     </div>
 
     <script>
-      const tierType = document.getElementById("tierType");
-      const memberCategoryOptions = document.getElementById("memberCategoryOptions");
-      const memberGenerationOptions = document.getElementById("memberGenerationOptions");
-      const songOptions = document.getElementById("songOptions");
+      function showElement(el) {
+        el.classList.remove("opacity-0", "max-h-0", "scale-95");
+        el.classList.add("opacity-100", "max-h-40", "scale-100");
+      }
+
+      function hideElement(el) {
+        el.classList.remove("opacity-100", "max-h-40", "scale-100");
+        el.classList.add("opacity-0", "max-h-0", "scale-95");
+      }
 
       tierType.addEventListener("change", function () {
         // Sembunyikan semua
-        memberCategoryOptions.classList.add("hidden");
-        memberGenerationOptions.classList.add("hidden");
-        songOptions.classList.add("hidden");
+        hideElement(memberCategoryOptions);
+        hideElement(memberGenerationOptions);
+        hideElement(songOptions);
 
-        // Tampilkan jika tipe tier adalah "member"
+        // Tampilkan sesuai pilihan
         if (this.value === "member") {
-          memberCategoryOptions.classList.remove("hidden");
-          memberGenerationOptions.classList.remove("hidden");
+          showElement(memberCategoryOptions);
+          showElement(memberGenerationOptions);
         } else if (this.value === "setlistSong") {
-          songOptions.classList.remove("hidden");
+          showElement(songOptions);
         }
       });
     </script>
