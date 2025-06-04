@@ -1456,6 +1456,128 @@ const setlistSongs = [
     setlist: "rnn",
     tracknumber: "M16.",
   },
+
+  //   Banzai
+  {
+    name: "Oboete Kudasai",
+    idname: "Tolong Ingatlah",
+    setlist: "banzai",
+    tracknumber: "M00.",
+  },
+  {
+    name: "Romance Kakurenbo",
+    idname: "Petak Umpet Romansa",
+    setlist: "banzai",
+    tracknumber: "M00.",
+  },
+  {
+    name: "HA!",
+    idname: "HA!",
+    setlist: "banzai",
+    tracknumber: "M01.",
+  },
+  {
+    name: "Nagiichi",
+    idname: "Gadis yang Paling Cantik Di Pinggiran Pantai",
+    setlist: "banzai",
+    tracknumber: "M02.",
+  },
+  {
+    name: "Eien Pressure",
+    idname: "Selamanya Pressure",
+    setlist: "banzai",
+    tracknumber: "M03.",
+  },
+  {
+    name: "Surprise Unite Song",
+    idname: "Surprise Unite Song",
+    setlist: "banzai",
+    tracknumber: "M04.-M08.",
+  },
+  {
+    name: "Teacher Teacher",
+    idname: "Teacher Teacher",
+    setlist: "banzai",
+    tracknumber: "M09.",
+  },
+  {
+    name: "Kataomoi Finally",
+    idname: "Cinta Tak Berbalas Finally",
+    setlist: "banzai",
+    tracknumber: "M10.",
+  },
+  {
+    name: "Kamonegix",
+    idname: "Kamonegix",
+    setlist: "banzai",
+    tracknumber: "M10.",
+  },
+  {
+    name: "Must be now",
+    idname: "Must be now",
+    setlist: "banzai",
+    tracknumber: "M11.",
+  },
+  {
+    name: "How come?",
+    idname: "How come?",
+    setlist: "banzai",
+    tracknumber: "M11.",
+  },
+  {
+    name: "Sweet & Bitter",
+    idname: "Sweet & Bitter",
+    setlist: "banzai",
+    tracknumber: "M12.",
+  },
+  {
+    name: "So long!",
+    idname: "So long!",
+    setlist: "banzai",
+    tracknumber: "M12.",
+  },
+  {
+    name: "Tsugi no Season",
+    idname: "Musim yang Selanjutnya",
+    setlist: "banzai",
+    tracknumber: "M13.",
+  },
+  {
+    name: "Iiwake Maybe",
+    idname: "Alasanku Maybe",
+    setlist: "banzai",
+    tracknumber: "M13.",
+  },
+  {
+    name: "Shoujo wa Manatsu ni Nani wo Suru?",
+    idname: "Apa yang Sang Gadis Perbuat di Musim Panas?",
+    setlist: "banzai",
+    tracknumber: "M14.",
+  },
+  {
+    name: "Seventeen",
+    idname: "Seventeen",
+    setlist: "banzai",
+    tracknumber: "M14.",
+  },
+  {
+    name: "Pareo wa Emerald",
+    idname: "Pareo adalah Emerald",
+    setlist: "banzai",
+    tracknumber: "M15.",
+  },
+  {
+    name: "Manatsu no Sounds Good!",
+    idname: "Musim Panas Sounds Good!",
+    setlist: "banzai",
+    tracknumber: "M15.",
+  },
+  {
+    name: "Banzai Venus",
+    idname: "Banzai Venus",
+    setlist: "banzai",
+    tracknumber: "M16.",
+  },
 ];
 
 export default setlistSongs;
