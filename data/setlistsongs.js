@@ -194,6 +194,104 @@ const setlistSongs = [
     setlist: "rkj",
     tracknumber: "M16.",
   },
+
+  //   BNT
+  {
+    name: "Dreamin' girls",
+    idname: "Dreamin' girls",
+    setlist: "bnt",
+    tracknumber: "M01.",
+  },
+  {
+    name: "RUN RUN RUN",
+    idname: "RUN RUN RUN",
+    setlist: "bnt",
+    tracknumber: "M02.",
+  },
+  {
+    name: "Mirai no Kajitsu",
+    idname: "Buah Masa Depan",
+    setlist: "bnt",
+    tracknumber: "M03.",
+  },
+  {
+    name: "Viva! Hurricane",
+    idname: "Viva! Hurricane",
+    setlist: "bnt",
+    tracknumber: "M04.",
+  },
+  {
+    name: "Idol Nante Yobanaide",
+    idname: "Jangan Panggil Aku Idol",
+    setlist: "bnt",
+    tracknumber: "M05.",
+  },
+  {
+    name: "Boku to Juliet to Jet Coaster",
+    idname: "Aku, Juliet dan Jet Coaster",
+    setlist: "bnt",
+    tracknumber: "M06.",
+  },
+  {
+    name: "Higurashi no Koi",
+    idname: "Cinta Higurashi",
+    setlist: "bnt",
+    tracknumber: "M07.",
+  },
+  {
+    name: "Itoshisa no Defense",
+    idname: "Pertahanan dari Cinta",
+    setlist: "bnt",
+    tracknumber: "M08.",
+  },
+  {
+    name: "Himawari",
+    idname: "Bunga Matahari",
+    setlist: "bnt",
+    tracknumber: "M09.",
+  },
+  {
+    name: "Takeuchi Senpai",
+    idname: "Kakak Kelasku",
+    setlist: "bnt",
+    tracknumber: "M10.",
+  },
+  {
+    name: "Sonna Konna Wake de",
+    idname: "Dengan Berbagai Alasan",
+    setlist: "bnt",
+    tracknumber: "M11.",
+  },
+  {
+    name: "Déja vu",
+    idname: "Déja vu",
+    setlist: "bnt",
+    tracknumber: "M12.",
+  },
+  {
+    name: "Yuuhi wo Miteiru ka?",
+    idname: "Apakah Kau Melihat Mentari Senja?",
+    setlist: "bnt",
+    tracknumber: "M13.",
+  },
+  {
+    name: "Lay down",
+    idname: "Lay down",
+    setlist: "bnt",
+    tracknumber: "M14.",
+  },
+  {
+    name: "BINGO!",
+    idname: "BINGO!",
+    setlist: "bnt",
+    tracknumber: "M15.",
+  },
+  {
+    name: "Boku no Taiyou",
+    idname: "Matahari Milikku",
+    setlist: "bnt",
+    tracknumber: "M16.",
+  },
 ];
 
 export default setlistSongs;
