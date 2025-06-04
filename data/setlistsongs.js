@@ -672,6 +672,104 @@ const setlistSongs = [
     setlist: "tnm",
     tracknumber: "M16.",
   },
+
+  //   SBGN
+  {
+    name: "Mammoth",
+    idname: "Mammoth",
+    setlist: "sbgn",
+    tracknumber: "M01.",
+  },
+  {
+    name: "Saishuu Bell ga Naru",
+    idname: "Bel Terakhir Berbunyi",
+    setlist: "sbgn",
+    tracknumber: "M02.",
+  },
+  {
+    name: "Boyfriend no Tsukurikata",
+    idname: "Cara Mendapatkan Pacar",
+    setlist: "sbgn",
+    tracknumber: "M03.",
+  },
+  {
+    name: "Erai Hito ni Naritakunai",
+    idname: "Tidak Ingin Menjadi Orang Hebat",
+    setlist: "sbgn",
+    tracknumber: "M04.",
+  },
+  {
+    name: "Return Match",
+    idname: "Return Match",
+    setlist: "sbgn",
+    tracknumber: "M05.",
+  },
+  {
+    name: "Hatsukoi Dorobou",
+    idname: "Pencuri Cinta Pertama",
+    setlist: "sbgn",
+    tracknumber: "M06.",
+  },
+  {
+    name: "Gomen ne Jewel",
+    idname: "Maafkan Hai Permataku",
+    setlist: "sbgn",
+    tracknumber: "M07.",
+  },
+  {
+    name: "Oshibe to Meshibe to Yoru no Chouchou",
+    idname: "Putik, Benang Sari dan Kupu-kupu Malam",
+    setlist: "sbgn",
+    tracknumber: "M08.",
+  },
+  {
+    name: "18nin Shimai no Uta",
+    idname: "Lagu Delapan Belas Bersaudari",
+    setlist: "sbgn",
+    tracknumber: "M09.",
+  },
+  {
+    name: "Stand up",
+    idname: "Stand up",
+    setlist: "sbgn",
+    tracknumber: "M10.",
+  },
+  {
+    name: "Coolgirl",
+    idname: "Coolgirl",
+    setlist: "sbgn",
+    tracknumber: "M11.",
+  },
+  {
+    name: "Kaiyuugyo no Capacity",
+    idname: "Kapasitas Ikan Migrasi",
+    setlist: "sbgn",
+    tracknumber: "M12.",
+  },
+  {
+    name: "Ai ni Ikou",
+    idname: "Pergi Untuk Bertemu",
+    setlist: "sbgn",
+    tracknumber: "M13.",
+  },
+  {
+    name: "Shamu Neko",
+    idname: "Kucing Siam",
+    setlist: "sbgn",
+    tracknumber: "M14.",
+  },
+  {
+    name: "Melos no Michi",
+    idname: "Jalan Melos",
+    setlist: "sbgn",
+    tracknumber: "M15.",
+  },
+  {
+    name: "Sasae",
+    idname: "Dukungan",
+    setlist: "sbgn",
+    tracknumber: "M16.",
+  },
 ];
 
 export default setlistSongs;
