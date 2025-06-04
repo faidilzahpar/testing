@@ -104,7 +104,16 @@
 
     <!-- Available Items Area -->
     <div class="w-11/12 mx-auto bg-gray-800 p-4 rounded-lg">
-      <h2 id="availableTitle" class="text-lg font-semibold mb-2">Available Items (0)</h2>
+      <div class="flex items-center justify-between mb-2">
+        <h2 id="availableTitle" class="text-lg font-semibold">Available Items (0)</h2>
+        <div class="flex items-center gap-2">
+          <label class="text-sm">Language:</label>
+          <select id="langToggle" class="bg-gray-700 text-white rounded px-2 py-1 text-sm">
+            <option value="jp">JP</option>
+            <option value="id">ID</option>
+          </select>
+        </div>
+      </div>
       <div id="availableItems" class="flex flex-wrap gap-2"></div>
     </div>
 
@@ -134,6 +143,42 @@
         document.getElementById("availableTitle").textContent = `Available ${displayName}s (${count})`;
       }
 
+      let currentLang = "jp";
+
+      document.getElementById("langToggle").addEventListener("change", (e) => {
+        currentLang = e.target.value;
+        updateItemLanguages();
+      });
+
+      function updateItemLanguages() {
+        const allCards = document.querySelectorAll("#availableItems > div, .tier-content > div");
+
+        allCards.forEach((card) => {
+          if (type === "setlistSong") {
+            const nameEl = card.querySelector("div p");
+            const trackEl = card.querySelector("p.text-sm");
+            const tracknumber = trackEl?.textContent;
+
+            // Cari data aslinya
+            const item = setlistSongs.find((song) => song.tracknumber === tracknumber && song.setlist === setlist);
+            if (item && nameEl) {
+              nameEl.textContent = currentLang === "id" ? item.idname : item.name;
+            }
+          }
+
+          // Jika mendukung toggle untuk single atau setlist
+          if ((type === "single" || type === "setlist") && card.querySelector("p.text-sm")) {
+            const nameEl = card.querySelector("p.text-sm");
+            const imgEl = card.querySelector("img");
+            const src = imgEl?.getAttribute("src");
+            const item = (type === "single" ? singles : setlists).find((el) => el.image === src);
+            if (item && item.idname) {
+              nameEl.textContent = currentLang === "id" ? item.idname : item.name;
+            }
+          }
+        });
+      }
+
       function renderDraggableCards(data) {
         const container = document.getElementById("availableItems");
         container.innerHTML = "";
@@ -144,10 +189,10 @@
           if (type === "setlistSong") {
             div.className = "bg-gray-900 text-white rounded w-24 text-center cursor-move overflow-hidden flex flex-col";
             div.innerHTML = `
-          <div class="flex-1 flex items-center justify-center p-1">
-            <p>${item.name}</p>
-          </div>
-          <p class='text-sm text-white px-1 mt-1 bg-black truncate w-full'>${item.tracknumber}</p>`;
+            <div class="flex-1 flex items-center justify-center p-1">
+              <p>${currentLang === "id" ? item.idname : item.name}</p>
+            </div>
+            <p class='text-sm text-white px-1 mt-1 bg-black truncate w-full'>${item.tracknumber}</p>`;
           } else {
             div.innerHTML = `
           <img src="${item.image}" class="h-24 object-cover object-top w-full mx-auto" />
