@@ -203,7 +203,7 @@ const allMembers = [
     name: "Gendis Mayrannisa",
     image: "./assets/gendis.jpg",
     isActive: true,
-    generation: "gen11",
+    generation: "gen11 && trainee",
   },
 
   // Gen 12
@@ -213,6 +213,20 @@ const allMembers = [
     isActive: true,
     generation: "gen11",
   },
+  {
+    name: "Fritzy Rosmerian",
+    image: "./assets/fritzy.jpg",
+    isActive: true,
+    generation: "gen11",
+  },
+  {
+    name: "Nayla Suji",
+    image: "./assets/nayla.jpg",
+    isActive: true,
+    isTrainee: true,
+    generation: "gen11",
+  },
+  
 ];
 
 export default allMembers;

@@ -151,9 +151,20 @@
 
       function filterAndRenderMembers() {
         let filtered = [...allMembers];
-        if (category === "active") filtered = filtered.filter((m) => m.isActive);
-        if (category === "ex") filtered = filtered.filter((m) => !m.isActive);
-        if (generation && generation !== "gen1") filtered = filtered.filter((m) => m.generation === generation);
+
+        if (category === "active") {
+          filtered = filtered.filter((m) => m.isActive && !m.isTrainee);
+        } else if (category === "trainee") {
+          filtered = filtered.filter((m) => m.isTrainee);
+        } else if (category === "ex") {
+          filtered = filtered.filter((m) => !m.isActive);
+        }
+
+        // Jika bukan trainee, maka filter generasi
+        if (category !== "trainee" && generation && generation !== "gen1") {
+          filtered = filtered.filter((m) => m.generation === generation);
+        }
+
         renderDraggableCards(filtered);
       }
 

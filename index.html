@@ -100,7 +100,10 @@
           const memberCategory = document.getElementById("memberFilter");
           const generation = document.getElementById("memberGenerationFilter");
 
-          if (memberCategory.selectedIndex === 0 || generation.selectedIndex === 0) {
+          if (
+            memberCategory.selectedIndex === 0 || // <-- termasuk "trainee" sekarang
+            generation.selectedIndex === 0
+          ) {
             alert("Silakan pilih kategori dan generasi member terlebih dahulu.");
             return;
           }
