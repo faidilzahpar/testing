@@ -11,7 +11,7 @@
     <!-- Header -->
     <div class="bg-gray-800 px-4 py-3 flex items-center">
       <button onclick="history.back()" class="text-white mr-2">⬅</button>
-      <img src="logo.png" alt="Logo" class="w-6 h-6 mr-2" />
+      <img src="https://jkt48.com/images/logo.svg" alt="Logo" class="w-6 h-6" />
       <span class="text-lg font-semibold">JKT48 Tierlist</span>
     </div>
 
@@ -127,14 +127,40 @@
       const generation = query.get("generation");
       const setlist = query.get("setlist");
 
+      const setlistNameMap = {
+        pajama: "Pajama Drive",
+        rkj: "Aturan Anti Cinta",
+        bnt: "Matahari Milikku",
+        dnt: "Demi Seseorang",
+        sg: "Gadis-Gadis Remaja",
+        twt: "Sambil Menggandeng Erat Tanganku",
+        tnm: "Dewi Theater",
+        sbgn: "Bel Terakhir Berbunyi",
+        sakagari: "Saka Agari",
+        tadaima: "Sekarang Sedang Jatuh Cinta",
+        iny: "Fajar Sang Idola",
+        rsg: "Romansa Sang Gadis",
+        snm: "Tunas di Balik Seragam",
+        fly: "Fly, Team T!",
+        rnn: "Cara Meminum Ramune",
+        banzai: "Banzai",
+        aitakatta: "Ingin Bertemu",
+      };
+
       const typeTitleMap = {
         member: "Member",
         single: "Single",
         setlist: "Setlist",
-        setlistSong: "Setlist Song",
+        
       };
 
-      const displayName = typeTitleMap[type] || "Item";
+      let displayName;
+
+      if (type === "setlistSong") {
+        displayName = setlistNameMap[setlist] || "Setlist Song";
+      } else {
+        displayName = typeTitleMap[type] || "Item";
+      }
       document.getElementById("pageTitle").textContent = `My ${displayName} Tierlist`;
 
       // Set title untuk item yang tersedia

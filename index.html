@@ -83,6 +83,16 @@
     </div>
 
     <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const tierTypeSelect = document.getElementById("tierType");
+        // Cek apakah ada value yang sudah dipilih sebelumnya (dari query string, localStorage, dll)
+        if (tierTypeSelect.value !== "" && tierTypeSelect.value !== "-- Select Tierlist Type --") {
+          // Picu event change secara manual agar kategori & generasi muncul
+          const event = new Event("change");
+          tierTypeSelect.dispatchEvent(event);
+        }
+      });
+
       const startButton = document.getElementById("startButton");
       const tierType = document.getElementById("tierType");
 
@@ -105,7 +115,6 @@
             return;
           }
 
-          
           url += `&category=${memberCategory.value}&generation=${generation.value}`;
         } else if (selectedType === "setlistSong") {
           const setlist = document.getElementById("songFilter");
