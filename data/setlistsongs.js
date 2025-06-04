@@ -562,6 +562,116 @@ const setlistSongs = [
     setlist: "twt",
     tracknumber: "M16.",
   },
+
+  //   TNM
+  {
+    name: "Romance Kakurenbo",
+    idname: "Petak Umpet Romansa",
+    setlist: "tnm",
+    tracknumber: "M00.",
+  },
+  {
+    name: "overture",
+    idname: "overture (JKT48 ver.)",
+    setlist: "tnm",
+    tracknumber: "M00.",
+  },
+  {
+    name: "Yuuki no Hammer",
+    idname: "Palu Keberanian",
+    setlist: "tnm",
+    tracknumber: "M01.",
+  },
+  {
+    name: "Inseki no Kakuritsu",
+    idname: "Presentasi Meteor",
+    setlist: "tnm",
+    tracknumber: "M02.",
+  },
+  {
+    name: "Ai no Stripper",
+    idname: "Stripper Cinta",
+    setlist: "tnm",
+    tracknumber: "M03.",
+  },
+  {
+    name: "Theater no Megami",
+    idname: "Dewi Theater",
+    setlist: "tnm",
+    tracknumber: "M04.",
+  },
+  {
+    name: "Hatsukoi yo, Konnichiwa",
+    idname: "Cinta Pertama, Selamat Siang",
+    setlist: "tnm",
+    tracknumber: "M05.",
+  },
+  {
+    name: "Arashi no Yoru ni wa",
+    idname: "Pada Malam Yang Berbadai",
+    setlist: "tnm",
+    tracknumber: "M06.",
+  },
+  {
+    name: "Candy",
+    idname: "Candy",
+    setlist: "tnm",
+    tracknumber: "M07.",
+  },
+  {
+    name: "Locker room boy",
+    idname: "Locker room boy",
+    setlist: "tnm",
+    tracknumber: "M08.",
+  },
+  {
+    name: "Yokaze no Shiwaza",
+    idname: "Perbuatan Angin Malam",
+    setlist: "tnm",
+    tracknumber: "M09.",
+  },
+  {
+    name: "100 Meter Conbini",
+    idname: "100 Meter ke Minimarket",
+    setlist: "tnm",
+    tracknumber: "M10.",
+  },
+  {
+    name: "Suki Suki Suki",
+    idname: "Suka Suka Suka",
+    setlist: "tnm",
+    tracknumber: "M11.",
+  },
+  {
+    name: "Sayonara no Kanashibari",
+    idname: "Membeku Karena Selamat Tinggal",
+    setlist: "tnm",
+    tracknumber: "M12.",
+  },
+  {
+    name: "Shiokaze no Shoutaijou",
+    idname: "Surat Undangan Angin Laut",
+    setlist: "tnm",
+    tracknumber: "M13.",
+  },
+  {
+    name: "Honest Man",
+    idname: "Honest Man",
+    setlist: "tnm",
+    tracknumber: "M14.",
+  },
+  {
+    name: "Team J Oshi",
+    idname: "Team J Oshi",
+    setlist: "tnm",
+    tracknumber: "M15.",
+  },
+  {
+    name: "Bokutachi no Kamihikouki",
+    idname: "Pesawat Terbang Kertas Kita",
+    setlist: "tnm",
+    tracknumber: "M16.",
+  },
 ];
 
 export default setlistSongs;
