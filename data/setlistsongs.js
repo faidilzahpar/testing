@@ -464,6 +464,104 @@ const setlistSongs = [
     setlist: "sg",
     tracknumber: "M14.",
   },
+
+  //   TWT
+  {
+    name: "Bokura no Kaze",
+    idname: "Angin Kita",
+    setlist: "twt",
+    tracknumber: "M01.",
+  },
+  {
+    name: "Mango No.2",
+    idname: "Mango No.2",
+    setlist: "twt",
+    tracknumber: "M02.",
+  },
+  {
+    name: "Te wo Tsunaginagara",
+    idname: "Sambil Menggandeng Erat Tanganku",
+    setlist: "twt",
+    tracknumber: "M03.",
+  },
+  {
+    name: "Chime wa LOVE SONG",
+    idname: "Bel Sekolah Adalah Love Song",
+    setlist: "twt",
+    tracknumber: "M04.",
+  },
+  {
+    name: "Glory days",
+    idname: "Glory days",
+    setlist: "twt",
+    tracknumber: "M05.",
+  },
+  {
+    name: "Kono Mune no Barcode",
+    idname: "Barcode Hati Ini",
+    setlist: "twt",
+    tracknumber: "M06.",
+  },
+  {
+    name: "Wimbledon e Tsureteitte",
+    idname: "Ajak Aku Pergi Menuju Ke Wimbledon",
+    setlist: "twt",
+    tracknumber: "M07.",
+  },
+  {
+    name: "Ame no Pianist",
+    idname: "Sang Pianis Hujan",
+    setlist: "twt",
+    tracknumber: "M08.",
+  },
+  {
+    name: "Choco no Yukue",
+    idname: "Keberadaan Coklat Itu",
+    setlist: "twt",
+    tracknumber: "M09.",
+  },
+  {
+    name: "Innocence",
+    idname: "Innocence",
+    setlist: "twt",
+    tracknumber: "M10.",
+  },
+  {
+    name: "Romance Rocket",
+    idname: "Romance Rocket",
+    setlist: "twt",
+    tracknumber: "M11.",
+  },
+  {
+    name: "Koi no Keikou to Taisaku",
+    idname: "Arah Sang Cinta dan Balasannya",
+    setlist: "twt",
+    tracknumber: "M12.",
+  },
+  {
+    name: "Daisuki",
+    idname: "Aku Sangat Suka",
+    setlist: "twt",
+    tracknumber: "M13.",
+  },
+  {
+    name: "Rope no Yuujou",
+    idname: "Tali Persahabatan",
+    setlist: "twt",
+    tracknumber: "M14.",
+  },
+  {
+    name: "Kayoubi no Yoru, Suiyobi no Asa",
+    idname: "Malam Hari Selasa, Pagi Hari Rabu",
+    setlist: "twt",
+    tracknumber: "M15.",
+  },
+  {
+    name: "Tooku ni Ite mo",
+    idname: "Di Tempat Yang Jauh Pun",
+    setlist: "twt",
+    tracknumber: "M16.",
+  },
 ];
 
 export default setlistSongs;
