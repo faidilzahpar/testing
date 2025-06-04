@@ -110,6 +110,7 @@
 
     <script type="module">
       import allMembers from "./data/members.js";
+      import setlistSongs from "./data/setlistsongs.js";
 
       const query = new URLSearchParams(window.location.search);
       const type = query.get("type");
@@ -140,9 +141,16 @@
         data.forEach((item) => {
           const div = document.createElement("div");
           div.className = "bg-transparent text-black rounded w-24 text-center cursor-move overflow-hidden";
-          div.innerHTML = `
-        <img src="${item.image}" class="h-24 object-cover object-top w-full mx-auto" />
-        <p class='text-sm text-white px-1 mt-1 bg-black truncate w-full'>${item.name}</p>`;
+          if (type === "setlistSong") {
+            div.className = "bg-gray-900 text-white p-1 rounded w-24 text-center cursor-move overflow-hidden";
+            div.innerHTML = `
+          <p>${item.name}</p>
+          <p class='text-sm text-white px-1 mt-1 bg-black truncate w-full'>${item.tracknumber}</p>`;
+          } else {
+            div.innerHTML = `
+          <img src="${item.image}" class="h-24 object-cover object-top w-full mx-auto" />
+          <p class='text-sm text-white px-1 mt-1 bg-black truncate w-full'>${item.name}</p>`;
+          }
           container.appendChild(div);
         });
 
@@ -260,9 +268,9 @@
       // Jalankan berdasarkan tipe
       if (type === "member") {
         filterAndRenderMembers();
-      } else {
-        // Placeholder: kamu bisa tambah logic khusus `single`, `setlist`, `setlistSong` di sini
-        // renderDraggableCards(allSingles) → misal
+      } else if (type === "setlistSong") {
+        const filtered = setlistSongs.filter((song) => song.setlist === setlist);
+        renderDraggableCards(filtered);
       }
     </script>
   </body>
