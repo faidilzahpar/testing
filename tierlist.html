@@ -142,9 +142,11 @@
           const div = document.createElement("div");
           div.className = "bg-transparent text-black rounded w-24 text-center cursor-move overflow-hidden";
           if (type === "setlistSong") {
-            div.className = "bg-gray-900 text-white p-1 rounded w-24 text-center cursor-move overflow-hidden";
+            div.className = "bg-gray-900 text-white rounded w-24 text-center cursor-move overflow-hidden flex flex-col";
             div.innerHTML = `
-          <p>${item.name}</p>
+          <div class="flex-1 flex items-center justify-center p-1">
+            <p>${item.name}</p>
+          </div>
           <p class='text-sm text-white px-1 mt-1 bg-black truncate w-full'>${item.tracknumber}</p>`;
           } else {
             div.innerHTML = `
