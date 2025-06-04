@@ -18,8 +18,8 @@
         <option disabled selected>-- Select Tierlist Type --</option>
         <option value="member">Member</option>
         <option value="single">Single</option>
-        <option value="stage">Setlist</option>
-        <option value="setlistSong">Song of Setlist</option>
+        <option value="setlist">Setlist</option>
+        <option value="setlistSong">Setlist Song</option>
       </select>
 
       <!-- Dropdown Kategori Member -->
@@ -79,10 +79,46 @@
       </div>
 
       <!-- Button -->
-      <button class="bg-red-700 text-white px-6 py-2 rounded hover:bg-red-800 transition">Start Making Tierlist</button>
+      <button id="startButton" class="bg-red-700 text-white px-6 py-2 rounded hover:bg-red-800 transition">Start Making Tierlist</button>
     </div>
 
     <script>
+      const startButton = document.getElementById("startButton");
+      const tierType = document.getElementById("tierType");
+
+      startButton.addEventListener("click", function () {
+        const selectedType = tierType.value;
+
+        if (!selectedType || tierType.selectedIndex === 0) {
+          alert("Silakan pilih jenis tierlist terlebih dahulu.");
+          return;
+        }
+
+        let url = `tierlist.html?type=${selectedType}`;
+
+        if (selectedType === "member") {
+          const memberCategory = document.getElementById("memberFilter");
+          const generation = document.getElementById("memberGenerationFilter");
+
+          if (memberCategory.selectedIndex === 0 || generation.selectedIndex === 0) {
+            alert("Silakan pilih kategori dan generasi member terlebih dahulu.");
+            return;
+          }
+
+          url += `&category=${memberCategory.value}&generation=${generation.value}`;
+        } else if (selectedType === "setlistSong") {
+          const setlist = document.getElementById("songFilter");
+          if (setlist.selectedIndex === 0) {
+            alert("Silakan pilih setlist terlebih dahulu.");
+            return;
+          }
+
+          url += `&setlist=${setlist.value}`;
+        }
+
+        window.location.href = url;
+      });
+
       function showElement(el) {
         el.classList.remove("opacity-0", "max-h-0", "scale-95");
         el.classList.add("opacity-100", "max-h-40", "scale-100");

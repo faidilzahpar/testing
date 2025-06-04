@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JKT48 Tierlist</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  </head>
+  <body class="bg-gray-900 text-white min-h-screen">
+    <!-- Header -->
+    <div class="bg-gray-800 px-4 py-3 flex items-center">
+      <button onclick="history.back()" class="text-white mr-2">⬅</button>
+      <img src="logo.png" alt="Logo" class="w-6 h-6 mr-2" />
+      <span class="text-lg font-semibold">JKT48 Tierlist</span>
+    </div>
+
+    <!-- Main Title -->
+    <div class="text-center mt-6 mb-4">
+      <h1 class="text-2xl font-semibold" id="pageTitle">My Tierlist</h1>
+    </div>
+
+    <!-- Tier Area -->
+    <div class="w-11/12 mx-auto bg-gray-800 rounded-lg overflow-hidden">
+      <div id="tierListContainer">
+        <div class="tier-row flex">
+          <!-- Tier label & menu -->
+          <div class="flex items-center justify-between w-48 px-4 py-2 bg-red-400 relative">
+            <span class="font-bold text-black">S Tier</span>
+            <button class="settings-btn relative text-black">⚙</button>
+          </div>
+          <!-- Drop area untuk item -->
+          <div class="flex-1  rounded-r-lg p-2 flex gap-2 items-center tier-content">
+            <!-- Item draggable akan masuk sini -->
+          </div>
+        </div>
+
+        <div class="tier-row flex">
+          <!-- Tier label & menu -->
+          <div class="flex items-center justify-between w-48 px-4 py-2 bg-yellow-400 relative">
+            <span class="font-bold text-black">A Tier</span>
+            <button class="settings-btn relative text-black">⚙</button>
+          </div>
+          <!-- Drop area untuk item -->
+          <div class="flex-1  rounded-r-lg p-2 flex gap-2 items-center tier-content">
+            <!-- Item draggable akan masuk sini -->
+          </div>
+        </div>
+
+        <div class="tier-row flex">
+          <!-- Tier label & menu -->
+          <div class="flex items-center justify-between w-48 px-4 py-2 bg-yellow-200 relative">
+            <span class="font-bold text-black">B Tier</span>
+            <button class="settings-btn relative text-black">⚙</button>
+          </div>
+          <!-- Drop area untuk item -->
+          <div class="flex-1  rounded-r-lg p-2 flex gap-2 items-center tier-content">
+            <!-- Item draggable akan masuk sini -->
+          </div>
+        </div>
+
+        <div class="tier-row flex">
+          <!-- Tier label & menu -->
+          <div class="flex items-center justify-between w-48 px-4 py-2 bg-yellow-100 relative">
+            <span class="font-bold text-black">C Tier</span>
+            <button class="settings-btn relative text-black">⚙</button>
+          </div>
+          <!-- Drop area untuk item -->
+          <div class="flex-1  rounded-r-lg p-2 flex gap-2 items-center tier-content">
+            <!-- Item draggable akan masuk sini -->
+          </div>
+        </div>
+
+        <div class="tier-row flex">
+          <!-- Tier label & menu -->
+          <div class="flex items-center justify-between w-48 px-4 py-2 bg-green-300 relative">
+            <span class="font-bold text-black">D Tier</span>
+            <button class="settings-btn relative text-black">⚙</button>
+          </div>
+          <!-- Drop area untuk item -->
+          <div class="flex-1  rounded-r-lg p-2 flex gap-2 items-center tier-content">
+            <!-- Item draggable akan masuk sini -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tierMenu" class="absolute hidden bg-white text-sm rounded shadow w-40 z-50">
+      <ul class="py-1">
+        <li class="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer" data-action="up">↑ Move Up</li>
+        <li class="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer" data-action="down">↓ Move Down</li>
+        <li class="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer" data-action="edit">✏ Edit Name</li>
+        <li class="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer" data-action="clear">🗑 Clear Row</li>
+        <li class="px-4 py-2 text-red-600 hover:bg-red-100 cursor-pointer" data-action="delete">❌ Delete Row</li>
+      </ul>
+    </div>
+
+    <!-- Control Buttons -->
+    <div class="flex justify-center gap-4 my-4">
+      <button class="bg-blue-600 px-4 py-2 rounded">+ Add New Tier</button>
+      <button class="bg-purple-600 px-4 py-2 rounded">Reset</button>
+      <button class="bg-green-600 px-4 py-2 rounded">Save as Image</button>
+    </div>
+
+    <!-- Available Items Area -->
+    <div class="w-11/12 mx-auto bg-gray-800 p-4 rounded-lg">
+      <h2 id="availableTitle" class="text-lg font-semibold mb-2">Available Items (0)</h2>
+      <div id="availableItems" class="flex flex-wrap gap-2"></div>
+    </div>
+
+    <script>
+      const query = new URLSearchParams(window.location.search);
+      const type = query.get("type");
+      const category = query.get("category");
+      const generation = query.get("generation");
+      const setlist = query.get("setlist");
+
+      const typeTitleMap = {
+        member: "Member",
+        single: "Single",
+        setlist: "Setlist",
+        setlistSong: "Setlist Song",
+      };
+
+      const displayName = typeTitleMap[type] || "Item";
+      document.getElementById("pageTitle").textContent = `My ${displayName} Tierlist`;
+
+      // Set title untuk item yang tersedia
+      function updateAvailableTitle() {
+        const count = document.querySelectorAll("#availableItems > div").length;
+        document.getElementById("availableTitle").textContent = `Available ${displayName}s (${count})`;
+      }
+
+      // Dummy data member
+      const allMembers = [
+        { name: "Feni Fitriyanti", image: "img/feni.jpg", isActive: true, generation: "gen3" },
+        { name: "Shania Gracia", image: "img/gracia.jpg", isActive: true, generation: "gen3" },
+      ];
+
+      function renderDraggableCards(data) {
+        const container = document.getElementById("availableItems");
+        container.innerHTML = "";
+
+        data.forEach((item) => {
+          const div = document.createElement("div");
+          div.className = "bg-white text-black p-2 rounded w-24 text-center cursor-move";
+          div.innerHTML = `
+        <img src="${item.image}" class="rounded w-20 h-20 object-cover mx-auto" />
+        <p class='text-xs mt-1'>${item.name}</p>`;
+          container.appendChild(div);
+        });
+
+        updateAvailableTitle();
+      }
+
+      function filterAndRenderMembers() {
+        let filtered = [...allMembers];
+        if (category === "active") filtered = filtered.filter((m) => m.isActive);
+        if (category === "ex") filtered = filtered.filter((m) => !m.isActive);
+        if (generation && generation !== "gen1") filtered = filtered.filter((m) => m.generation === generation);
+        renderDraggableCards(filtered);
+      }
+
+      //drag & drop
+      document.querySelectorAll(".tier-content").forEach((el) => {
+        new Sortable(el, {
+          group: "members",
+          animation: 150,
+          onAdd: function () {
+            updateAvailableTitle(); // saat item ditambahkan ke tier
+          },
+          onRemove: function () {
+            updateAvailableTitle(); // saat item dikembalikan ke available
+          },
+        });
+      });
+
+      new Sortable(document.getElementById("availableItems"), {
+        group: "members",
+        animation: 150,
+        sort: false,
+      });
+
+      let activeRow = null;
+
+      document.querySelectorAll(".settings-btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const menu = document.getElementById("tierMenu");
+          const rect = btn.getBoundingClientRect();
+
+          activeRow = btn.closest(".tier-row");
+
+          menu.style.top = `${rect.bottom + window.scrollY}px`;
+          menu.style.left = `${rect.left + window.scrollX}px`;
+          menu.classList.remove("hidden");
+        });
+      });
+
+      // Klik luar untuk menutup menu
+      document.addEventListener("click", () => {
+        document.getElementById("tierMenu").classList.add("hidden");
+      });
+
+      // Aksi menu
+      document.querySelectorAll("#tierMenu li").forEach((item) => {
+        item.addEventListener("click", () => {
+          const action = item.dataset.action;
+          if (!activeRow) return;
+
+          switch (action) {
+            case "up":
+              const prev = activeRow.previousElementSibling;
+              if (prev) activeRow.parentNode.insertBefore(activeRow, prev);
+              break;
+            case "down":
+              const next = activeRow.nextElementSibling;
+              if (next) activeRow.parentNode.insertBefore(next, activeRow);
+              break;
+            case "edit":
+              const newName = prompt("New Tier Name:");
+              if (newName) activeRow.querySelector("span").textContent = newName;
+              break;
+            case "clear":
+              const dropzone = activeRow.querySelector(".tier-content");
+              const available = document.getElementById("availableItems");
+              // Pindahkan semua anak elemen ke available
+              while (dropzone.firstChild) {
+                available.appendChild(dropzone.firstChild);
+              }
+              updateAvailableTitle();
+              break;
+            case "delete":
+              const tierContent = activeRow.querySelector(".tier-content");
+              while (tierContent.firstChild) {
+                document.getElementById("availableItems").appendChild(tierContent.firstChild);
+              }
+              activeRow.remove();
+              updateAvailableTitle();
+              break;
+          }
+
+          document.getElementById("tierMenu").classList.add("hidden");
+        });
+      });
+
+      // Jalankan berdasarkan tipe
+      if (type === "member") {
+        filterAndRenderMembers();
+      } else {
+        // Placeholder: kamu bisa tambah logic khusus `single`, `setlist`, `setlistSong` di sini
+        // renderDraggableCards(allSingles) → misal
+      }
+    </script>
+  </body>
+</html>
