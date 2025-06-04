@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JKT48 Tierlist</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
   </head>
   <body class="bg-gray-900 text-white min-h-screen">
@@ -25,7 +26,7 @@
       <div id="tierListContainer">
         <div class="tier-row flex">
           <!-- Tier label & menu -->
-          <div class="flex items-center justify-between w-48 px-4 py-2 bg-red-400 relative">
+          <div class="flex items-center justify-between w-48 px-4 py-2 bg-[#ff7f7e] relative">
             <span class="font-bold text-black">S Tier</span>
             <button class="settings-btn relative text-black">⚙</button>
           </div>
@@ -37,7 +38,7 @@
 
         <div class="tier-row flex">
           <!-- Tier label & menu -->
-          <div class="flex items-center justify-between w-48 px-4 py-2 bg-yellow-400 relative">
+          <div class="flex items-center justify-between w-48 px-4 py-2 bg-[#ffbf7f] relative">
             <span class="font-bold text-black">A Tier</span>
             <button class="settings-btn relative text-black">⚙</button>
           </div>
@@ -49,7 +50,7 @@
 
         <div class="tier-row flex">
           <!-- Tier label & menu -->
-          <div class="flex items-center justify-between w-48 px-4 py-2 bg-yellow-200 relative">
+          <div class="flex items-center justify-between w-48 px-4 py-2 bg-[#ffdf80] relative">
             <span class="font-bold text-black">B Tier</span>
             <button class="settings-btn relative text-black">⚙</button>
           </div>
@@ -61,7 +62,7 @@
 
         <div class="tier-row flex">
           <!-- Tier label & menu -->
-          <div class="flex items-center justify-between w-48 px-4 py-2 bg-yellow-100 relative">
+          <div class="flex items-center justify-between w-48 px-4 py-2 bg-[#feff7f] relative">
             <span class="font-bold text-black">C Tier</span>
             <button class="settings-btn relative text-black">⚙</button>
           </div>
@@ -73,7 +74,7 @@
 
         <div class="tier-row flex">
           <!-- Tier label & menu -->
-          <div class="flex items-center justify-between w-48 px-4 py-2 bg-green-300 relative">
+          <div class="flex items-center justify-between w-48 px-4 py-2 bg-[#7eff80] relative">
             <span class="font-bold text-black">D Tier</span>
             <button class="settings-btn relative text-black">⚙</button>
           </div>
@@ -93,6 +94,26 @@
         <li class="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer" data-action="clear">🗑 Clear Row</li>
         <li class="px-4 py-2 text-red-600 hover:bg-red-100 cursor-pointer" data-action="delete">❌ Delete Row</li>
       </ul>
+    </div>
+
+    <div id="editTierModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+      <div class="bg-white rounded-lg p-4 w-72 text-black">
+        <h3 class="text-lg font-semibold mb-2">Edit Tier</h3>
+        <label class="block mb-2">
+          Name:
+          <input id="tierNameInput" type="text" class="w-full border rounded px-2 py-1 mt-1" />
+        </label>
+        <div class="mb-2">
+          Color:
+          <div id="colorPalette" class="grid grid-cols-5 gap-2 mt-1">
+            <!-- Color options inserted via JS -->
+          </div>
+        </div>
+        <div class="flex justify-end gap-2 mt-4">
+          <button id="cancelEditTier" class="px-3 py-1 bg-gray-300 rounded">Cancel</button>
+          <button id="saveEditTier" class="px-3 py-1 bg-blue-600 text-white rounded">Save</button>
+        </div>
+      </div>
     </div>
 
     <!-- Control Buttons -->
@@ -151,7 +172,6 @@
         member: "Member",
         single: "Single",
         setlist: "Setlist",
-        
       };
 
       let displayName;
@@ -305,6 +325,52 @@
         document.getElementById("tierMenu").classList.add("hidden");
       });
 
+      const colorPalette = ["[#ff7f7e]", "[#ffbf7f]", "[#ffdf80]", "[#feff7f]", "[#7eff80]", "red-700", "orange-400", "yellow-400", "green-700", "blue-400", "indigo-400", "purple-400", "pink-400", "gray-400", "stone-400"];
+
+      let selectedColor = "red";
+      let editingRow = null;
+
+      const colorContainer = document.getElementById("colorPalette");
+
+      // Tampilkan palette warna
+      colorPalette.forEach((color) => {
+        const btn = document.createElement("div");
+        btn.className = `w-8 h-8 rounded cursor-pointer bg-${color} border-2 border-black`;
+        btn.dataset.color = color;
+        btn.addEventListener("click", () => {
+          selectedColor = color;
+
+          // Hapus highlight sebelumnya
+          [...colorContainer.children].forEach((el) => el.classList.remove("border-black"));
+          btn.classList.add("border-black");
+        });
+        colorContainer.appendChild(btn);
+      });
+
+      // Handler edit
+      document.getElementById("saveEditTier").addEventListener("click", () => {
+        const nameInput = document.getElementById("tierNameInput").value;
+        const label = editingRow.querySelector("div.w-48");
+
+        if (nameInput.trim()) {
+          label.querySelector("span").textContent = nameInput.trim();
+        }
+
+        // Hapus semua class bg-* sebelumnya
+        label.classList.forEach((cls) => {
+          if (cls.startsWith("bg-")) label.classList.remove(cls);
+        });
+
+        // Tambahkan class baru
+        label.classList.add(`bg-${selectedColor}`);
+
+        document.getElementById("editTierModal").classList.add("hidden");
+      });
+
+      document.getElementById("cancelEditTier").addEventListener("click", () => {
+        document.getElementById("editTierModal").classList.add("hidden");
+      });
+
       // Aksi menu
       document.querySelectorAll("#tierMenu li").forEach((item) => {
         item.addEventListener("click", () => {
@@ -321,8 +387,14 @@
               if (next) activeRow.parentNode.insertBefore(next, activeRow);
               break;
             case "edit":
-              const newName = prompt("New Tier Name:");
-              if (newName) activeRow.querySelector("span").textContent = newName;
+              editingRow = activeRow;
+              const currentName = editingRow.querySelector("span").textContent;
+              document.getElementById("tierNameInput").value = currentName;
+
+              // Reset selection & modal
+              selectedColor = "red";
+              [...colorContainer.children].forEach((el) => el.classList.remove("border-black"));
+              document.getElementById("editTierModal").classList.remove("hidden");
               break;
             case "clear":
               const dropzone = activeRow.querySelector(".tier-content");
