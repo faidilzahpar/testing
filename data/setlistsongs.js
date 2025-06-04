@@ -379,7 +379,91 @@ const setlistSongs = [
     tracknumber: "M14.",
   },
 
-  
+  //   SG
+  {
+    name: "Seishun Girls",
+    idname: "Gadis Gadis Remaja",
+    setlist: "sg",
+    tracknumber: "M01.",
+  },
+  {
+    name: "Beach Sandal",
+    idname: "Beach Sandal",
+    setlist: "sg",
+    tracknumber: "M02.",
+  },
+  {
+    name: "Kimi ga Hoshi ni Naru Made",
+    idname: "Sampai Dirimu Menjadi Bintang",
+    setlist: "sg",
+    tracknumber: "M03.",
+  },
+  {
+    name: "Blue rose",
+    idname: "Blue rose",
+    setlist: "sg",
+    tracknumber: "M04.",
+  },
+  {
+    name: "Kinjirareta Futari",
+    idname: "Dua Orang Yang Terlarang",
+    setlist: "sg",
+    tracknumber: "M05.",
+  },
+  {
+    name: "Ame no Doubutsuen",
+    idname: "Kebun Binatang Di Saat Hujan",
+    setlist: "sg",
+    tracknumber: "M06.",
+  },
+  {
+    name: "Fushidara na Natsu",
+    idname: "Musim Panas Yang Kacau",
+    setlist: "sg",
+    tracknumber: "M07.",
+  },
+  {
+    name: "Don't disturb!",
+    idname: "Don't disturb!",
+    setlist: "sg",
+    tracknumber: "M08.",
+  },
+  {
+    name: "Virgin love",
+    idname: "Virgin love",
+    setlist: "sg",
+    tracknumber: "M09.",
+  },
+  {
+    name: "Hizukehenkousen",
+    idname: "Garis Pergantian Hari Cinta",
+    setlist: "sg",
+    tracknumber: "M10.",
+  },
+  {
+    name: "Boku no Uchiage Hanabi",
+    idname: "Kembang Api Milikku",
+    setlist: "sg",
+    tracknumber: "M11.",
+  },
+  {
+    name: "Yakusoku yo",
+    idname: "Janji Ya..",
+    setlist: "sg",
+    tracknumber: "M12.",
+  },
+  {
+    name: "Korogaru Ishi ni Nare",
+    idname: "Jadilah Batu Yang Berputar",
+    setlist: "sg",
+    tracknumber: "M13.",
+  },
+  {
+    name: "Cinderella wa Damasarenai",
+    idname: "Cinderella Tidak Akan Tertipu",
+    setlist: "sg",
+    tracknumber: "M14.",
+  },
 ];
 
 export default setlistSongs;
