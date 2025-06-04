@@ -292,6 +292,94 @@ const setlistSongs = [
     setlist: "bnt",
     tracknumber: "M16.",
   },
+
+  //   DNT
+  {
+    name: "Tsukimisou",
+    idname: "Evening Primrose",
+    setlist: "dnt",
+    tracknumber: "M01.",
+  },
+  {
+    name: "Warning",
+    idname: "Warning",
+    setlist: "dnt",
+    tracknumber: "M02.",
+  },
+  {
+    name: "Tanjoubi no Yoru",
+    idname: "Malam Ulang Tahun",
+    setlist: "dnt",
+    tracknumber: "M03.",
+  },
+  {
+    name: "Bird",
+    idname: "Bird",
+    setlist: "dnt",
+    tracknumber: "M04.",
+  },
+  {
+    name: "Nage Kiss de Uchi Otose!",
+    idname: "Jatuhkan dengan Kiss Bye!",
+    setlist: "dnt",
+    tracknumber: "M05.",
+  },
+  {
+    name: "Shinkirou",
+    idname: "Khayalan",
+    setlist: "dnt",
+    tracknumber: "M06.",
+  },
+  {
+    name: "Rider",
+    idname: "Rider",
+    setlist: "dnt",
+    tracknumber: "M07.",
+  },
+  {
+    name: "Seifuku ga Jama wo Suru",
+    idname: "Seragam ini Sangat Mengganggu",
+    setlist: "dnt",
+    tracknumber: "M08.",
+  },
+  {
+    name: "Natsu ga Icchatta",
+    idname: "Summer Has Gone",
+    setlist: "dnt",
+    tracknumber: "M09.",
+  },
+  {
+    name: "Koike",
+    idname: "Adyth",
+    setlist: "dnt",
+    tracknumber: "M10.",
+  },
+  {
+    name: "Tsuki no Katachi",
+    idname: "Bentuk Sang Rembulan",
+    setlist: "dnt",
+    tracknumber: "M11.",
+  },
+  {
+    name: "Dareka no Tame ni ~What can I do for someone?~",
+    idname: "Demi Seseorang",
+    setlist: "dnt",
+    tracknumber: "M12.",
+  },
+  {
+    name: "Medley",
+    idname: "Medley: Aitakatta / Kimi no Koto ga Suki dakara / Baby! Baby! Baby! / Ponytail to Shushu",
+    setlist: "dnt",
+    tracknumber: "M13.",
+  },
+  {
+    name: "Namida Uri no Shoujo",
+    idname: "Gadis Penjual Air Mata",
+    setlist: "dnt",
+    tracknumber: "M14.",
+  },
+
+  
 ];
 
 export default setlistSongs;
