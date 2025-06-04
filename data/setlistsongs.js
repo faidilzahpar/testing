@@ -967,7 +967,103 @@ const setlistSongs = [
     tracknumber: "M16.",
   },
 
-  
+  //   INY
+  {
+    name: "Idol no Yoake",
+    idname: "Fajar Sang Idola",
+    setlist: "iny",
+    tracknumber: "M01.",
+  },
+  {
+    name: "Minasan mo go Issho ni",
+    idname: "Bersama-sama Semuanya",
+    setlist: "iny",
+    tracknumber: "M02.",
+  },
+  {
+    name: "Haru Ichiban ga Fuku Koro",
+    idname: "Angin Musim Semi Pertama",
+    setlist: "iny",
+    tracknumber: "M03.",
+  },
+  {
+    name: "Kobushi no Seigi",
+    idname: "Kebenaran Tinju Ini",
+    setlist: "iny",
+    tracknumber: "M04.",
+  },
+  {
+    name: "Zannen Shoujo",
+    idname: "Gadis yang Celaka",
+    setlist: "iny",
+    tracknumber: "M05.",
+  },
+  {
+    name: "Kuchi Utsushi no Chocolate",
+    idname: "Berikan Coklat dengan Bibir",
+    setlist: "iny",
+    tracknumber: "M06.",
+  },
+  {
+    name: "Kataomoi no Taikakusen",
+    idname: "Garis Diagonal Cinta Searah",
+    setlist: "iny",
+    tracknumber: "M07.",
+  },
+  {
+    name: "Tengoku Yarou",
+    idname: "Berandalan di Surga",
+    setlist: "iny",
+    tracknumber: "M08.",
+  },
+  {
+    name: "Itoshiki Natasha",
+    idname: "Natasha yang Ku Cinta",
+    setlist: "iny",
+    tracknumber: "M09.",
+  },
+  {
+    name: "Joshikousei wa Yamerarenai",
+    idname: "Tak Bisa Berhenti Jadi Gadis SMA",
+    setlist: "iny",
+    tracknumber: "M10.",
+  },
+  {
+    name: "Suki to Ieba Yokatta",
+    idname: "Andai Ku Dapat Ungkapkan Cinta",
+    setlist: "iny",
+    tracknumber: "M11.",
+  },
+  {
+    name: "Sobakasu no Kiss",
+    idname: "Freckles' Kiss",
+    setlist: "iny",
+    tracknumber: "M12.",
+  },
+  {
+    name: "Tanpopo no Kesshin",
+    idname: "Keteguhan Hati Dandelion",
+    setlist: "iny",
+    tracknumber: "M13.",
+  },
+  {
+    name: "J Stars",
+    idname: "J Stars",
+    setlist: "iny",
+    tracknumber: "M14.",
+  },
+  {
+    name: "Yokosuka Curve",
+    idname: "Jalan Berkelok Yokosuka",
+    setlist: "iny",
+    tracknumber: "M15.",
+  },
+  {
+    name: "Arigatou",
+    idname: "Terima Kasih",
+    setlist: "iny",
+    tracknumber: "M16.",
+  },
 ];
 
 export default setlistSongs;
