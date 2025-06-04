@@ -1578,6 +1578,86 @@ const setlistSongs = [
     setlist: "banzai",
     tracknumber: "M16.",
   },
+
+  //   Aitakatta
+  {
+    name: "Nageki no Figure",
+    idname: "Boneka yang Sedih",
+    setlist: "aitakatta",
+    tracknumber: "M01.",
+  },
+  {
+    name: "Namida no Shounan",
+    idname: "Air Mata Shounan",
+    setlist: "aitakatta",
+    tracknumber: "M02.",
+  },
+  {
+    name: "Aitakatta",
+    idname: "Ingin Bertemu",
+    setlist: "aitakatta",
+    tracknumber: "M03.",
+  },
+  {
+    name: "Nagisa no CHERRY",
+    idname: "Cherry Tepi Pantai",
+    setlist: "aitakatta",
+    tracknumber: "M04.",
+  },
+  {
+    name: "Glass no I LOVE YOU",
+    idname: "Kaca Berbentuk I LOVE YOU",
+    setlist: "aitakatta",
+    tracknumber: "M05.",
+  },
+  {
+    name: "Koi no PLAN",
+    idname: "Rencana Cinta",
+    setlist: "aitakatta",
+    tracknumber: "M06.",
+  },
+  {
+    name: "Senaka Kara Dakishimete",
+    idname: "Peluklah Aku dari Belakang",
+    setlist: "aitakatta",
+    tracknumber: "M07.",
+  },
+  {
+    name: "Rio no Kakumei",
+    idname: "Revolusi Rio",
+    setlist: "aitakatta",
+    tracknumber: "M08.",
+  },
+  {
+    name: "Dakedo...",
+    idname: "Tetapi...",
+    setlist: "aitakatta",
+    tracknumber: "M09.",
+  },
+  {
+    name: "Dear my teacher",
+    idname: "Dear my teacher",
+    setlist: "aitakatta",
+    tracknumber: "M10.",
+  },
+  {
+    name: "Mirai no Tobira",
+    idname: "Pintu Masa Depan",
+    setlist: "aitakatta",
+    tracknumber: "M13.",
+  },
+  {
+    name: "JKT48",
+    idname: "JKT48",
+    setlist: "aitakatta",
+    tracknumber: "M14.",
+  },
+  {
+    name: "Skirt, Hirari",
+    idname: "Rok Bergoyang",
+    setlist: "aitakatta",
+    tracknumber: "M16.",
+  },
 ];
 
 export default setlistSongs;
