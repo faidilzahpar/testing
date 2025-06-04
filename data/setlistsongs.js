@@ -1,4 +1,5 @@
 const setlistSongs = [
+  // Pajama
   {
     name: "Shonichi",
     idname: "Hari Pertama",
@@ -93,6 +94,104 @@ const setlistSongs = [
     name: "Shiroi Shirts",
     idname: "Baju Putih",
     setlist: "pajama",
+    tracknumber: "M16.",
+  },
+
+  //   RKJ
+  {
+    name: "Nagai Hikari",
+    idname: "Cahaya Panjang",
+    setlist: "rkj",
+    tracknumber: "M01.",
+  },
+  {
+    name: "Squall no Aida ni",
+    idname: "Di Tengah Hujan Badai Tiba-Tiba",
+    setlist: "rkj",
+    tracknumber: "M02.",
+  },
+  {
+    name: "JK Nemurihime",
+    idname: "Gadis SMA Putri Tidur",
+    setlist: "rkj",
+    tracknumber: "M03.",
+  },
+  {
+    name: "Kimi ni Autabi Koi wo Suru",
+    idname: "Jatuh Cinta Setiap Bertemu Denganmu",
+    setlist: "rkj",
+    tracknumber: "M04.",
+  },
+  {
+    name: "Kuroi Tenshi",
+    idname: "Malaikat Hitam",
+    setlist: "rkj",
+    tracknumber: "M05.",
+  },
+  {
+    name: "Heart Gata Virus",
+    idname: "Virus Tipe Hati",
+    setlist: "rkj",
+    tracknumber: "M06.",
+  },
+  {
+    name: "Renai Kinshi Jourei",
+    idname: "Aturan Anti Cinta",
+    setlist: "rkj",
+    tracknumber: "M07.",
+  },
+  {
+    name: "Tsundere!",
+    idname: "Tsundere!",
+    setlist: "rkj",
+    tracknumber: "M08.",
+  },
+  {
+    name: "Manatsu no Christmas Rose",
+    idname: "Mawar Natal Musim Panas",
+    setlist: "rkj",
+    tracknumber: "M09.",
+  },
+  {
+    name: "Switch",
+    idname: "Switch",
+    setlist: "rkj",
+    tracknumber: "M10.",
+  },
+  {
+    name: "109",
+    idname: "109",
+    setlist: "rkj",
+    tracknumber: "M11.",
+  },
+  {
+    name: "Hikoukigumo",
+    idname: "Jejak Awan Pesawat",
+    setlist: "rkj",
+    tracknumber: "M12.",
+  },
+  {
+    name: "Ano Koro no Sneaker",
+    idname: "Sneaker Waktu Itu",
+    setlist: "rkj",
+    tracknumber: "M13.",
+  },
+  {
+    name: "JKT Sanjou!",
+    idname: "JKT Datang!",
+    setlist: "rkj",
+    tracknumber: "M14.",
+  },
+  {
+    name: "Namida no Shinkokyuu",
+    idname: "Nafas Dalam Air Mata",
+    setlist: "rkj",
+    tracknumber: "M15.",
+  },
+  {
+    name: "Oogoe Diamond",
+    idname: "Teriakan Berlian",
+    setlist: "rkj",
     tracknumber: "M16.",
   },
 ];
