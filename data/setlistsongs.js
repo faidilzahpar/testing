@@ -367,8 +367,8 @@ const setlistSongs = [
     tracknumber: "M12.",
   },
   {
-    name: "Medley",
-    idname: "Medley: Aitakatta / Kimi no Koto ga Suki dakara / Baby! Baby! Baby! / Ponytail to Shushu",
+    name: "Medley (Aitakatta, KimiSuki, Baby3x, Ponytail)",
+    idname: "Medley (Ingin Bertemu, Karena Ku Suka Dirimu, Baby3x, Ponytail)",
     setlist: "dnt",
     tracknumber: "M13.",
   },
