@@ -1358,6 +1358,104 @@ const setlistSongs = [
     setlist: "fly",
     tracknumber: "M16.",
   },
+
+  //   Ramune
+  {
+    name: "Kizashi",
+    idname: "Pertanda",
+    setlist: "rnn",
+    tracknumber: "M01.",
+  },
+  {
+    name: "Koutei no Koinu",
+    idname: "Schoolyards Puppy",
+    setlist: "rnn",
+    tracknumber: "M02.",
+  },
+  {
+    name: "Disco Hokenshitsu",
+    idname: "Disco di UKS",
+    setlist: "rnn",
+    tracknumber: "M03.",
+  },
+  {
+    name: "Omatase Set list",
+    idname: "Setlist yang Dinanti",
+    setlist: "rnn",
+    tracknumber: "M04.",
+  },
+  {
+    name: "Cross",
+    idname: "Cross",
+    setlist: "rnn",
+    tracknumber: "M05.",
+  },
+  {
+    name: "Finland Miracle",
+    idname: "Finland Miracle",
+    setlist: "rnn",
+    tracknumber: "M06.",
+  },
+  {
+    name: "Manazashi, Sayonara",
+    idname: "Menatapmu, Sayonara",
+    setlist: "rnn",
+    tracknumber: "M07.",
+  },
+  {
+    name: "Usotsuki na Dachou",
+    idname: "Burung Unta si Pembohong",
+    setlist: "rnn",
+    tracknumber: "M08.",
+  },
+  {
+    name: "Nice to meet you!",
+    idname: "Nice to meet you!",
+    setlist: "rnn",
+    tracknumber: "M09.",
+  },
+  {
+    name: "Kodoku na Ballerina",
+    idname: "Balerina Dalam Sepi",
+    setlist: "rnn",
+    tracknumber: "M10.",
+  },
+  {
+    name: "Ima Kimi to Irareru Koto",
+    idname: "Sekarang Ku Bersama Denganmu",
+    setlist: "rnn",
+    tracknumber: "M11.",
+  },
+  {
+    name: "Winning Ball",
+    idname: "Winning Ball",
+    setlist: "rnn",
+    tracknumber: "M12.",
+  },
+  {
+    name: "Akushu no Ai",
+    idname: "Cinta Dalam Handshake",
+    setlist: "rnn",
+    tracknumber: "M13.",
+  },
+  {
+    name: "Bowling Ganbou",
+    idname: "Harapan Bowling",
+    setlist: "rnn",
+    tracknumber: "M14.",
+  },
+  {
+    name: "16iro no Yume Crayon",
+    idname: "16 Warna Krayon Mimpi",
+    setlist: "rnn",
+    tracknumber: "M15.",
+  },
+  {
+    name: "Ramune no Nomikata",
+    idname: "Cara Meminum Ramune",
+    setlist: "rnn",
+    tracknumber: "M16.",
+  },
 ];
 
 export default setlistSongs;
