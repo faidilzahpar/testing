@@ -143,7 +143,16 @@
         document.getElementById("availableTitle").textContent = `Available ${displayName}s (${count})`;
       }
 
-      let currentLang = "jp";
+      // Set bahasa awal dari localStorage
+      let currentLang = localStorage.getItem("lang") || "jp";
+      document.getElementById("langToggle").value = currentLang;
+
+      // Update saat toggle diganti
+      document.getElementById("langToggle").addEventListener("change", (e) => {
+        currentLang = e.target.value;
+        localStorage.setItem("lang", currentLang);
+        updateItemLanguages();
+      });
 
       document.getElementById("langToggle").addEventListener("change", (e) => {
         currentLang = e.target.value;
