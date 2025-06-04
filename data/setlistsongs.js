@@ -770,6 +770,204 @@ const setlistSongs = [
     setlist: "sbgn",
     tracknumber: "M16.",
   },
+
+  //   Tadaima
+  {
+    name: "Tadaima Renaichuu",
+    idname: "Sekarang Sedang Jatuh Cinta",
+    setlist: "tadaima",
+    tracknumber: "M01.",
+  },
+  {
+    name: "Kuma no Nuigurumi",
+    idname: "Boneka Teddy Bear",
+    setlist: "tadaima",
+    tracknumber: "M02.",
+  },
+  {
+    name: "Only Today",
+    idname: "Only Today",
+    setlist: "tadaima",
+    tracknumber: "M03.",
+  },
+  {
+    name: "7ji 12fun no Hatsukoi",
+    idname: "Cinta Pertama di Jam 7 lewat 12",
+    setlist: "tadaima",
+    tracknumber: "M04.",
+  },
+  {
+    name: "Haru ga Kuru Made",
+    idname: "Sampai Musim Semi Tiba",
+    setlist: "tadaima",
+    tracknumber: "M05.",
+  },
+  {
+    name: "Junai no Crescendo",
+    idname: "Cinta yang Tulus, Crescendo",
+    setlist: "tadaima",
+    tracknumber: "M06.",
+  },
+  {
+    name: "Faint",
+    idname: "Faint",
+    setlist: "tadaima",
+    tracknumber: "M07.",
+  },
+  {
+    name: "Kikyou",
+    idname: "Pulang Kampung",
+    setlist: "tadaima",
+    tracknumber: "M08.",
+  },
+  {
+    name: "Darui Kanji",
+    idname: "Rasanya Malas",
+    setlist: "tadaima",
+    tracknumber: "M09.",
+  },
+  {
+    name: "Mr. Kissman",
+    idname: "Mr. Kissman",
+    setlist: "tadaima",
+    tracknumber: "M10.",
+  },
+  {
+    name: "Kimi ga Oshiete Kureta",
+    idname: "Kamulah yang Memberitahu Aku",
+    setlist: "tadaima",
+    tracknumber: "M11.",
+  },
+  {
+    name: "BINGO!",
+    idname: "BINGO!",
+    setlist: "tadaima",
+    tracknumber: "M12.",
+  },
+  {
+    name: "Keibetsu Shiteita Aijou",
+    idname: "Rasa Sayang Yang Dulu Aku Remehkan",
+    setlist: "tadaima",
+    tracknumber: "M13.",
+  },
+  {
+    name: "LOVE CHASE",
+    idname: "LOVE CHASE",
+    setlist: "tadaima",
+    tracknumber: "M14.",
+  },
+  {
+    name: "Seifuku ga Jama wo Suru",
+    idname: "Seragam ini Sangat Mengganggu",
+    setlist: "tadaima",
+    tracknumber: "M15.",
+  },
+  {
+    name: "Nante Suteki na Sekai ni Umareta no Darou",
+    idname: "Betapa Indahnya Dunia Tempat Kita Lahir",
+    setlist: "tadaima",
+    tracknumber: "M16.",
+  },
+
+  //   Saka Agari
+  {
+    name: "Tenohira",
+    idname: "Telapak Tangan",
+    setlist: "sakagari",
+    tracknumber: "M01.",
+  },
+  {
+    name: "Saka Agari",
+    idname: "Saka Agari",
+    setlist: "sakagari",
+    tracknumber: "M02.",
+  },
+  {
+    name: "Hitei no Requiem",
+    idname: "Penyangkalan Diri Requiem",
+    setlist: "sakagari",
+    tracknumber: "M03.",
+  },
+  {
+    name: "Sono Ase wa Uso wo Tsukanai",
+    idname: "Keringat itu Tidak Berbohong",
+    setlist: "sakagari",
+    tracknumber: "M04.",
+  },
+  {
+    name: "End Roll",
+    idname: "End Roll",
+    setlist: "sakagari",
+    tracknumber: "M05.",
+  },
+  {
+    name: "Wagamama na Nagareboshi",
+    idname: "Si Bintang Jatuh yang Egois",
+    setlist: "sakagari",
+    tracknumber: "M06.",
+  },
+  {
+    name: "Ai no Iro",
+    idname: "Warna Cinta",
+    setlist: "sakagari",
+    tracknumber: "M07.",
+  },
+  {
+    name: "Dakishimeraretara",
+    idname: "Jika Aku Dipelukmu",
+    setlist: "sakagari",
+    tracknumber: "M08.",
+  },
+  {
+    name: "Mushi no Ballad",
+    idname: "Balada Serangga",
+    setlist: "sakagari",
+    tracknumber: "M09.",
+  },
+  {
+    name: "Furishite Maneshite",
+    idname: "Pura-pura dan Kepalsuan",
+    setlist: "sakagari",
+    tracknumber: "M10.",
+  },
+  {
+    name: "Umi wo Watare!",
+    idname: "Seberangi Lautan",
+    setlist: "sakagari",
+    tracknumber: "M11.",
+  },
+  {
+    name: "Machikado no Party",
+    idname: "Party di Sudut Jalan",
+    setlist: "sakagari",
+    tracknumber: "M12.",
+  },
+  {
+    name: "Fan Letter",
+    idname: "Fan Letter",
+    setlist: "sakagari",
+    tracknumber: "M13.",
+  },
+  {
+    name: "Fugiri",
+    idname: "Terhina",
+    setlist: "sakagari",
+    tracknumber: "M14.",
+  },
+  {
+    name: "Hanpa na Ikemen",
+    idname: "Ganteng Tapi Nanggung",
+    setlist: "sakagari",
+    tracknumber: "M15.",
+  },
+  {
+    name: "To be continued",
+    idname: "To be continued",
+    setlist: "sakagari",
+    tracknumber: "M16.",
+  },
+
+  
 ];
 
 export default setlistSongs;
