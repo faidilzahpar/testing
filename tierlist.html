@@ -30,7 +30,7 @@
             <button class="settings-btn relative text-black">⚙</button>
           </div>
           <!-- Drop area untuk item -->
-          <div class="flex-1  rounded-r-lg p-2 flex gap-2 items-center tier-content">
+          <div class="flex-1 rounded-r-lg p-2 flex gap-2 items-center tier-content">
             <!-- Item draggable akan masuk sini -->
           </div>
         </div>
@@ -42,7 +42,7 @@
             <button class="settings-btn relative text-black">⚙</button>
           </div>
           <!-- Drop area untuk item -->
-          <div class="flex-1  rounded-r-lg p-2 flex gap-2 items-center tier-content">
+          <div class="flex-1 rounded-r-lg p-2 flex gap-2 items-center tier-content">
             <!-- Item draggable akan masuk sini -->
           </div>
         </div>
@@ -54,7 +54,7 @@
             <button class="settings-btn relative text-black">⚙</button>
           </div>
           <!-- Drop area untuk item -->
-          <div class="flex-1  rounded-r-lg p-2 flex gap-2 items-center tier-content">
+          <div class="flex-1 rounded-r-lg p-2 flex gap-2 items-center tier-content">
             <!-- Item draggable akan masuk sini -->
           </div>
         </div>
@@ -66,7 +66,7 @@
             <button class="settings-btn relative text-black">⚙</button>
           </div>
           <!-- Drop area untuk item -->
-          <div class="flex-1  rounded-r-lg p-2 flex gap-2 items-center tier-content">
+          <div class="flex-1 rounded-r-lg p-2 flex gap-2 items-center tier-content">
             <!-- Item draggable akan masuk sini -->
           </div>
         </div>
@@ -78,7 +78,7 @@
             <button class="settings-btn relative text-black">⚙</button>
           </div>
           <!-- Drop area untuk item -->
-          <div class="flex-1  rounded-r-lg p-2 flex gap-2 items-center tier-content">
+          <div class="flex-1 rounded-r-lg p-2 flex gap-2 items-center tier-content">
             <!-- Item draggable akan masuk sini -->
           </div>
         </div>
@@ -108,7 +108,9 @@
       <div id="availableItems" class="flex flex-wrap gap-2"></div>
     </div>
 
-    <script>
+    <script type="module">
+      import allMembers from "./data/members.js";
+
       const query = new URLSearchParams(window.location.search);
       const type = query.get("type");
       const category = query.get("category");
@@ -130,12 +132,6 @@
         const count = document.querySelectorAll("#availableItems > div").length;
         document.getElementById("availableTitle").textContent = `Available ${displayName}s (${count})`;
       }
-
-      // Dummy data member
-      const allMembers = [
-        { name: "Feni Fitriyanti", image: "img/feni.jpg", isActive: true, generation: "gen3" },
-        { name: "Shania Gracia", image: "img/gracia.jpg", isActive: true, generation: "gen3" },
-      ];
 
       function renderDraggableCards(data) {
         const container = document.getElementById("availableItems");
@@ -178,7 +174,7 @@
       new Sortable(document.getElementById("availableItems"), {
         group: "members",
         animation: 150,
-        sort: false,
+        sort: true,
       });
 
       let activeRow = null;
