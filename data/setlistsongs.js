@@ -1064,6 +1064,104 @@ const setlistSongs = [
     setlist: "iny",
     tracknumber: "M16.",
   },
+
+  //   RSG
+  {
+    name: "Nagai Hikari",
+    idname: "Cahaya Panjang",
+    setlist: "rsg",
+    tracknumber: "M01.",
+  },
+  {
+    name: "Inseki no Kakuritsu",
+    idname: "Persentase Meteor",
+    setlist: "rsg",
+    tracknumber: "M02.",
+  },
+  {
+    name: "Kimi ga Oshiete Kureta",
+    idname: "Kamulah yang Memberitahu Aku",
+    setlist: "rsg",
+    tracknumber: "M03.",
+  },
+  {
+    name: "Beach Sandal",
+    idname: "Beach Sandal",
+    setlist: "rsg",
+    tracknumber: "M04.",
+  },
+  {
+    name: "Heart Gata Virus",
+    idname: "Virus Tipe Hati",
+    setlist: "rsg",
+    tracknumber: "M05.",
+  },
+  {
+    name: "Tsundere!",
+    idname: "Tsundere!",
+    setlist: "rsg",
+    tracknumber: "M06.",
+  },
+  {
+    name: "Arashi no Yoru ni wa",
+    idname: "Pada Malam Yang Berbadai",
+    setlist: "rsg",
+    tracknumber: "M07.",
+  },
+  {
+    name: "Kinjirareta Futari",
+    idname: "Dua Orang Yang Terlarang",
+    setlist: "rsg",
+    tracknumber: "M08.",
+  },
+  {
+    name: "Himawari",
+    idname: "Bunga Matahari",
+    setlist: "rsg",
+    tracknumber: "M09.",
+  },
+  {
+    name: "Darui Kanji",
+    idname: "Rasanya Malas",
+    setlist: "rsg",
+    tracknumber: "M10.",
+  },
+  {
+    name: "Kaiyuugyo no Capacity",
+    idname: "Kapasitas Ikan Migrasi",
+    setlist: "rsg",
+    tracknumber: "M11.",
+  },
+  {
+    name: "Only Today",
+    idname: "Only Today",
+    setlist: "rsg",
+    tracknumber: "M12.",
+  },
+  {
+    name: "Yakusoku yo",
+    idname: "Janji Ya..",
+    setlist: "rsg",
+    tracknumber: "M13.",
+  },
+  {
+    name: "Honest Man",
+    idname: "Honest Man",
+    setlist: "rsg",
+    tracknumber: "M14.",
+  },
+  {
+    name: "Boyfriend no Tsukurikata",
+    idname: "Cara Mendapatkan Pacar",
+    setlist: "rsg",
+    tracknumber: "M15.",
+  },
+  {
+    name: "Hikoukigumo",
+    idname: "Jejak Awan Pesawat",
+    setlist: "rsg",
+    tracknumber: "M16.",
+  },
 ];
 
 export default setlistSongs;
