@@ -160,10 +160,16 @@
           filtered = filtered.filter((m) => !m.isActive);
         }
 
-        // Jika bukan trainee, maka filter generasi
-        if (category !== "trainee" && generation && generation !== "gen1") {
+        // Selalu filter generasi kalau bukan "all"
+        if (generation !== "all") {
           filtered = filtered.filter((m) => m.generation === generation);
         }
+
+        // Urutkan: non-trainee dulu, lalu trainee
+        filtered.sort((a, b) => {
+          if (a.isTrainee === b.isTrainee) return 0;
+          return a.isTrainee ? 1 : -1;
+        });
 
         renderDraggableCards(filtered);
       }

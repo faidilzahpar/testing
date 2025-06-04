@@ -37,7 +37,7 @@
       <div id="memberGenerationOptions" class="transition-all duration-600 ease-in-out opacity-0 max-h-0 overflow-hidden scale-95">
         <select id="memberGenerationFilter" class="mb-4 border border-gray-300 rounded px-4 py-2 w-3xs bg-gray-200">
           <option disabled selected>-- Select Generation --</option>
-          <option value="gen1">All Generation</option>
+          <option value="all">All Generation</option>
           <option value="gen1">Generation 1</option>
           <option value="gen2">Generation 2</option>
           <option value="gen3">Generation 3</option>
@@ -100,14 +100,12 @@
           const memberCategory = document.getElementById("memberFilter");
           const generation = document.getElementById("memberGenerationFilter");
 
-          if (
-            memberCategory.selectedIndex === 0 || // <-- termasuk "trainee" sekarang
-            generation.selectedIndex === 0
-          ) {
+          if (memberCategory.selectedIndex === 0 || (memberCategory.value !== "trainee" && generation.selectedIndex === 0)) {
             alert("Silakan pilih kategori dan generasi member terlebih dahulu.");
             return;
           }
 
+          
           url += `&category=${memberCategory.value}&generation=${generation.value}`;
         } else if (selectedType === "setlistSong") {
           const setlist = document.getElementById("songFilter");
