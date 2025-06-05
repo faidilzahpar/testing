@@ -103,12 +103,12 @@
     </div>
 
     <div id="tierMenu" class="absolute hidden bg-white text-sm rounded shadow w-32 z-50">
-      <ul class="py-1">
-        <li class="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer" data-action="up">↑ Move Up</li>
-        <li class="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer" data-action="down">↓ Move Down</li>
-        <li class="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer" data-action="edit">✏ Edit Name</li>
-        <li class="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer" data-action="clear">🗑 Clear Row</li>
-        <li class="px-4 py-2 text-red-600 hover:bg-red-100 cursor-pointer" data-action="delete">❌ Delete Row</li>
+      <ul class="py-1 text-sm">
+        <li class="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer flex items-center gap-2" data-action="up"><i class="bx bx-up-arrow-alt"></i> Move Up</li>
+        <li class="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer flex items-center gap-2" data-action="down"><i class="bx bx-down-arrow-alt"></i> Move Down</li>
+        <li class="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer flex items-center gap-2" data-action="edit"><i class="bx bx-edit-alt"></i> Edit Name</li>
+        <li class="px-4 py-2 text-black hover:bg-gray-100 cursor-pointer flex items-center gap-2" data-action="clear"><i class="bx bx-eraser"></i> Clear Row</li>
+        <li class="px-4 py-2 text-red-600 hover:bg-red-100 cursor-pointer flex items-center gap-2" data-action="delete"><i class="bx bx-trash"></i> Delete Row</li>
       </ul>
     </div>
 
@@ -390,7 +390,7 @@
 
         if (editingRow) {
           // === Edit existing tier ===
-          const label = editingRow.querySelector("div.w-40");
+          const label = editingRow.querySelector("div.w-32.px-4");
           label.querySelector("span").textContent = nameInput;
 
           // Reset warna
@@ -449,15 +449,23 @@
               if (next) activeRow.parentNode.insertBefore(next, activeRow);
               break;
             case "edit":
-              editingRow = activeRow;
-              const currentName = editingRow.querySelector("span").textContent;
-              document.getElementById("tierNameInput").value = currentName;
+  editingRow = activeRow;
+  const currentName = editingRow.querySelector("span").textContent;
+  document.getElementById("tierNameInput").value = currentName;
 
-              // Reset selection & modal
-              selectedColor = "red";
-              [...colorContainer.children].forEach((el) => el.classList.remove("border-black"));
-              document.getElementById("editTierModal").classList.remove("hidden");
-              break;
+  // Ambil warna bg yang sedang aktif di row sekarang
+  const label = editingRow.querySelector("div.w-32.px-4");
+  const currentBgClass = [...label.classList].find(cls => cls.startsWith("bg-"));
+  selectedColor = currentBgClass ? currentBgClass.replace("bg-", "") : "red";
+
+  // Reset dan highlight warna di palette sesuai selectedColor
+  [...colorContainer.children].forEach((el) => el.classList.remove("border-black"));
+  const colorBtn = [...colorContainer.children].find(el => el.dataset.color === selectedColor);
+  if (colorBtn) colorBtn.classList.add("border-black");
+
+  document.getElementById("editTierModal").querySelector("h3").textContent = "Edit Tier";
+  document.getElementById("editTierModal").classList.remove("hidden");
+  break;
             case "clear":
               const dropzone = activeRow.querySelector(".tier-content");
               const available = document.getElementById("availableItems");
