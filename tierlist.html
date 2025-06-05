@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   </head>
   <body class="bg-gray-900 text-white min-h-screen">
     <!-- Header -->
@@ -17,70 +18,72 @@
     </div>
 
     <!-- Main Title -->
-    <div class="text-center mt-6 mb-4">
-      <h1 class="text-2xl font-semibold" id="pageTitle">My Tierlist</h1>
-    </div>
+    <div class="tierContainer">
+      <div class="text-center mt-6 mb-4">
+        <h1 class="text-2xl font-semibold" id="pageTitle">My Tierlist</h1>
+      </div>
 
-    <!-- Tier Area -->
-    <div class="w-11/12 mx-auto bg-gray-800 rounded-lg overflow-hidden">
-      <div id="tierListContainer">
-        <div class="tier-row flex">
-          <!-- Tier label & menu -->
-          <div class="flex items-center justify-between w-48 px-4 py-2 bg-[#ff7f7e] relative">
-            <span class="font-bold text-black">S Tier</span>
-            <button class="settings-btn relative text-black">⚙</button>
+      <!-- Tier Area -->
+      <div class="w-[96%] mx-auto bg-gray-800 rounded-lg overflow-hidden">
+        <div id="tierListContainer">
+          <div class="tier-row flex flex-col sm:flex-row min-h-32">
+            <!-- Tier label & menu -->
+            <div class="flex items-center justify-between w-40 px-4 py-2 bg-[#ff7f7e] relative">
+              <span class="font-bold text-black text-xl">S Tier</span>
+              <button class="settings-btn relative text-black">⚙</button>
+            </div>
+            <!-- Drop area untuk item -->
+            <div class="flex-1 rounded-r-lg p-2 flex flex-wrap gap-3 items-center tier-content">
+              <!-- Item draggable akan masuk sini -->
+            </div>
           </div>
-          <!-- Drop area untuk item -->
-          <div class="flex-1 rounded-r-lg p-2 flex gap-2 items-center tier-content">
-            <!-- Item draggable akan masuk sini -->
-          </div>
-        </div>
 
-        <div class="tier-row flex">
-          <!-- Tier label & menu -->
-          <div class="flex items-center justify-between w-48 px-4 py-2 bg-[#ffbf7f] relative">
-            <span class="font-bold text-black">A Tier</span>
-            <button class="settings-btn relative text-black">⚙</button>
+          <div class="tier-row flex flex-col sm:flex-row min-h-32">
+            <!-- Tier label & menu -->
+            <div class="flex items-center justify-between w-40 px-4 py-2 bg-[#ffbf7f] relative">
+              <span class="font-bold text-black text-xl">A Tier</span>
+              <button class="settings-btn relative text-black">⚙</button>
+            </div>
+            <!-- Drop area untuk item -->
+            <div class="flex-1 rounded-r-lg p-2 flex flex-wrap gap-3 items-center tier-content">
+              <!-- Item draggable akan masuk sini -->
+            </div>
           </div>
-          <!-- Drop area untuk item -->
-          <div class="flex-1 rounded-r-lg p-2 flex gap-2 items-center tier-content">
-            <!-- Item draggable akan masuk sini -->
-          </div>
-        </div>
 
-        <div class="tier-row flex">
-          <!-- Tier label & menu -->
-          <div class="flex items-center justify-between w-48 px-4 py-2 bg-[#ffdf80] relative">
-            <span class="font-bold text-black">B Tier</span>
-            <button class="settings-btn relative text-black">⚙</button>
+          <div class="tier-row flex flex-col sm:flex-row min-h-32">
+            <!-- Tier label & menu -->
+            <div class="flex items-center justify-between w-40 px-4 py-2 bg-[#ffdf80] relative">
+              <span class="font-bold text-black text-xl">B Tier</span>
+              <button class="settings-btn relative text-black">⚙</button>
+            </div>
+            <!-- Drop area untuk item -->
+            <div class="flex-1 rounded-r-lg p-2 flex flex-wrap gap-3 items-center tier-content">
+              <!-- Item draggable akan masuk sini -->
+            </div>
           </div>
-          <!-- Drop area untuk item -->
-          <div class="flex-1 rounded-r-lg p-2 flex gap-2 items-center tier-content">
-            <!-- Item draggable akan masuk sini -->
-          </div>
-        </div>
 
-        <div class="tier-row flex">
-          <!-- Tier label & menu -->
-          <div class="flex items-center justify-between w-48 px-4 py-2 bg-[#feff7f] relative">
-            <span class="font-bold text-black">C Tier</span>
-            <button class="settings-btn relative text-black">⚙</button>
+          <div class="tier-row flex flex-col sm:flex-row min-h-32">
+            <!-- Tier label & menu -->
+            <div class="flex items-center justify-between w-40 px-4 py-2 bg-[#feff7f] relative">
+              <span class="font-bold text-black text-xl">C Tier</span>
+              <button class="settings-btn relative text-black">⚙</button>
+            </div>
+            <!-- Drop area untuk item -->
+            <div class="flex-1 rounded-r-lg p-2 flex flex-wrap gap-3 items-center tier-content">
+              <!-- Item draggable akan masuk sini -->
+            </div>
           </div>
-          <!-- Drop area untuk item -->
-          <div class="flex-1 rounded-r-lg p-2 flex gap-2 items-center tier-content">
-            <!-- Item draggable akan masuk sini -->
-          </div>
-        </div>
 
-        <div class="tier-row flex">
-          <!-- Tier label & menu -->
-          <div class="flex items-center justify-between w-48 px-4 py-2 bg-[#7eff80] relative">
-            <span class="font-bold text-black">D Tier</span>
-            <button class="settings-btn relative text-black">⚙</button>
-          </div>
-          <!-- Drop area untuk item -->
-          <div class="flex-1 rounded-r-lg p-2 flex gap-2 items-center tier-content">
-            <!-- Item draggable akan masuk sini -->
+          <div class="tier-row flex flex-col sm:flex-row min-h-32">
+            <!-- Tier label & menu -->
+            <div class="flex items-center justify-between w-40 px-4 py-2 bg-[#7eff80] relative">
+              <span class="font-bold text-black text-xl">D Tier</span>
+              <button class="settings-btn relative text-black">⚙</button>
+            </div>
+            <!-- Drop area untuk item -->
+            <div class="flex-1 rounded-r-lg p-2 flex flex-wrap gap-3 items-center tier-content">
+              <!-- Item draggable akan masuk sini -->
+            </div>
           </div>
         </div>
       </div>
@@ -105,11 +108,11 @@
         </label>
         <div class="mb-2">
           Color:
-          <div id="colorPalette" class="grid grid-cols-5 gap-2 mt-1">
+          <div id="colorPalette" class="grid grid-cols-5 gap-3 mt-1">
             <!-- Color options inserted via JS -->
           </div>
         </div>
-        <div class="flex justify-end gap-2 mt-4">
+        <div class="flex justify-end gap-3 mt-4">
           <button id="cancelEditTier" class="px-3 py-1 bg-gray-300 rounded">Cancel</button>
           <button id="saveEditTier" class="px-3 py-1 bg-blue-600 text-white rounded">Save</button>
         </div>
@@ -118,16 +121,16 @@
 
     <!-- Control Buttons -->
     <div class="flex justify-center gap-4 my-4">
-      <button class="bg-blue-600 px-4 py-2 rounded">+ Add New Tier</button>
-      <button class="bg-purple-600 px-4 py-2 rounded">Reset</button>
-      <button class="bg-green-600 px-4 py-2 rounded">Save as Image</button>
+      <button class="add-btn bg-blue-600 px-4 py-2 rounded">+ Add New Tier</button>
+      <button class="reset-btn bg-purple-600 px-4 py-2 rounded">Reset</button>
+      <button class="save-btn bg-green-600 px-4 py-2 rounded">Save as Image</button>
     </div>
 
     <!-- Available Items Area -->
-    <div class="w-11/12 mx-auto bg-gray-800 p-4 rounded-lg">
+    <div class="w-[96%] mx-auto bg-gray-800 p-4 rounded-lg">
       <div class="flex items-center justify-between mb-2">
         <h2 id="availableTitle" class="text-lg font-semibold">Available Items (0)</h2>
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-3">
           <label class="text-sm">Language:</label>
           <select id="langToggle" class="bg-gray-900 text-white rounded px-2 py-1 text-sm">
             <option value="jp">JP</option>
@@ -135,7 +138,7 @@
           </select>
         </div>
       </div>
-      <div id="availableItems" class="flex flex-wrap gap-2"></div>
+      <div id="availableItems" class="flex flex-wrap gap-3"></div>
     </div>
 
     <script type="module">
@@ -184,7 +187,7 @@
         displayName = typeTitleMap[type] || "Item";
         availableLabel = displayName;
       }
-      
+
       document.getElementById("pageTitle").textContent = `My ${displayName} Tierlist`;
 
       function updateAvailableTitle() {
@@ -350,28 +353,65 @@
         colorContainer.appendChild(btn);
       });
 
+      function showTierMenu(e) {
+        e.stopPropagation(); // Supaya klik menu tidak menyebar ke dokumen
+        const btn = e.target;
+        const menu = document.getElementById("tierMenu");
+        const rect = btn.getBoundingClientRect();
+
+        activeRow = btn.closest(".tier-row");
+
+        menu.style.top = `${rect.bottom + window.scrollY}px`;
+        menu.style.left = `${rect.left + window.scrollX}px`;
+        menu.classList.remove("hidden");
+      }
+
       // Handler edit
       document.getElementById("saveEditTier").addEventListener("click", () => {
-        const nameInput = document.getElementById("tierNameInput").value;
-        const label = editingRow.querySelector("div.w-48");
+        const nameInput = tierNameInput.value.trim();
+        if (!nameInput) return;
 
-        if (nameInput.trim()) {
-          label.querySelector("span").textContent = nameInput.trim();
+        if (editingRow) {
+          // === Edit existing tier ===
+          const label = editingRow.querySelector("div.w-40");
+          label.querySelector("span").textContent = nameInput;
+
+          // Reset warna
+          label.classList.forEach((cls) => {
+            if (cls.startsWith("bg-")) label.classList.remove(cls);
+          });
+          label.classList.add(`bg-${selectedColor}`);
+        } else {
+          // === Add new tier ===
+          const newRow = document.createElement("div");
+          newRow.className = "tier-row flex";
+          newRow.innerHTML = `
+      <div class="flex items-center justify-between w-40 px-4 py-2 bg-${selectedColor} relative">
+        <span class="font-bold text-black text-xl">${nameInput}</span>
+        <button class="settings-btn relative text-black">⚙</button>
+      </div>
+      <div class="flex-1 rounded-r-lg p-2 flex flex-wrap gap-3 items-center tier-content">
+              <!-- Item draggable akan masuk sini -->
+      </div>
+    `;
+
+          // Append ke container tier
+          document.getElementById("tierListContainer").appendChild(newRow);
+
+          // Re-bind drag & drop
+          Sortable.create(newRow.querySelector(".tier-content"), {
+            group: "members",
+            animation: 150,
+          });
+
+          // Re-bind tombol ⚙
+          newRow.querySelector(".settings-btn").addEventListener("click", (e) => {
+            activeRow = e.target.closest(".tier-row");
+            showTierMenu(e);
+          });
         }
 
-        // Hapus semua class bg-* sebelumnya
-        label.classList.forEach((cls) => {
-          if (cls.startsWith("bg-")) label.classList.remove(cls);
-        });
-
-        // Tambahkan class baru
-        label.classList.add(`bg-${selectedColor}`);
-
-        document.getElementById("editTierModal").classList.add("hidden");
-      });
-
-      document.getElementById("cancelEditTier").addEventListener("click", () => {
-        document.getElementById("editTierModal").classList.add("hidden");
+        editModal.classList.add("hidden");
       });
 
       // Aksi menu
@@ -420,6 +460,23 @@
 
           document.getElementById("tierMenu").classList.add("hidden");
         });
+      });
+
+      const addBtn = document.querySelector(".add-btn");
+      const editModal = document.getElementById("editTierModal");
+      const tierNameInput = document.getElementById("tierNameInput");
+
+      addBtn.addEventListener("click", () => {
+        editingRow = null; // <-- Penting! Supaya tahu ini add, bukan edit
+        tierNameInput.value = ""; // Kosongkan input
+
+        selectedColor = "red"; // Default
+        [...colorContainer.children].forEach((el) => el.classList.remove("border-black"));
+        const defaultColorBtn = [...colorContainer.children].find((el) => el.dataset.color === "red");
+        if (defaultColorBtn) defaultColorBtn.classList.add("border-black");
+
+        editModal.querySelector("h3").textContent = "Add New Tier"; // Ubah title modal
+        editModal.classList.remove("hidden");
       });
 
       // Jalankan berdasarkan tipe
