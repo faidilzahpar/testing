@@ -29,7 +29,7 @@
       <!-- Tier Area -->
       <div class="w-[95%] mx-auto bg-gray-800 rounded-lg overflow-hidden">
         <div id="tierListContainer">
-          <div class="tier-row flex flex-col sm:flex-row min-h-32 border-b border-gray-900 border-b border-gray-900">
+          <div class="tier-row flex flex-row min-h-32 border-b border-gray-900 border-b border-gray-900">
             <!-- Tier label & menu -->
             <div class="flex items-center justify-between w-32 px-4 py-2 bg-[#ff7f7e] relative">
               <span class="font-bold text-black text-lg">S Tier</span>
@@ -43,7 +43,7 @@
             </div>
           </div>
 
-          <div class="tier-row flex flex-col sm:flex-row min-h-32 border-b border-gray-900">
+          <div class="tier-row flex flex-row min-h-32 border-b border-gray-900">
             <!-- Tier label & menu -->
             <div class="flex items-center justify-between w-32 px-4 py-2 bg-[#ffbf7f] relative">
               <span class="font-bold text-black text-lg">A Tier</span>
@@ -57,7 +57,7 @@
             </div>
           </div>
 
-          <div class="tier-row flex flex-col sm:flex-row min-h-32 border-b border-gray-900">
+          <div class="tier-row flex flex-row min-h-32 border-b border-gray-900">
             <!-- Tier label & menu -->
             <div class="flex items-center justify-between w-32 px-4 py-2 bg-[#ffdf80] relative">
               <span class="font-bold text-black text-lg">B Tier</span>
@@ -71,7 +71,7 @@
             </div>
           </div>
 
-          <div class="tier-row flex flex-col sm:flex-row min-h-32 border-b border-gray-900">
+          <div class="tier-row flex flex-row min-h-32 border-b border-gray-900">
             <!-- Tier label & menu -->
             <div class="flex items-center justify-between w-32 px-4 py-2 bg-[#feff7f] relative">
               <span class="font-bold text-black text-lg">C Tier</span>
@@ -85,7 +85,7 @@
             </div>
           </div>
 
-          <div class="tier-row flex flex-col sm:flex-row min-h-32 border-b border-gray-900">
+          <div class="tier-row flex flex-row min-h-32 border-b border-gray-900">
             <!-- Tier label & menu -->
             <div class="flex items-center justify-between w-32 px-4 py-2 bg-[#7eff80] relative">
               <span class="font-bold text-black text-lg">D Tier</span>
@@ -401,7 +401,7 @@
         } else {
           // === Add new tier ===
           const newRow = document.createElement("div");
-          newRow.className = "tier-row flex flex-col sm:flex-row min-h-32 border-b border-gray-900";
+          newRow.className = "tier-row flex flex-row min-h-32 border-b border-gray-900";
           newRow.innerHTML = `
       <div class="flex items-center justify-between w-32 px-4 py-2 bg-${selectedColor} relative">
         <span class="font-bold text-black text-lg">${nameInput}</span>
