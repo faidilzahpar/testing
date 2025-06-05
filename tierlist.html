@@ -175,18 +175,21 @@
       };
 
       let displayName;
+      let availableLabel;
 
       if (type === "setlistSong") {
         displayName = setlistNameMap[setlist] || "Setlist Song";
+        availableLabel = "Song";
       } else {
         displayName = typeTitleMap[type] || "Item";
+        availableLabel = displayName;
       }
+      
       document.getElementById("pageTitle").textContent = `My ${displayName} Tierlist`;
 
-      // Set title untuk item yang tersedia
       function updateAvailableTitle() {
         const count = document.querySelectorAll("#availableItems > div").length;
-        document.getElementById("availableTitle").textContent = `Available ${displayName}s (${count})`;
+        document.getElementById("availableTitle").textContent = `Available ${availableLabel}s (${count})`;
       }
 
       // Set bahasa awal dari localStorage
@@ -241,7 +244,7 @@
         data.forEach((item) => {
           const div = document.createElement("div");
           if (type === "setlistSong") {
-            div.className = "bg-gray-900 text-white rounded h-28 w-24 text-center cursor-move overflow-hidden flex flex-col";
+            div.className = "bg-gray-900 text-white rounded h-28 w-28 text-center cursor-move overflow-hidden flex flex-col";
             div.innerHTML = `
             <div class="text-sm flex-1 flex items-center justify-center p-1">
               <p>${currentLang === "id" ? item.idname : item.name}</p>
