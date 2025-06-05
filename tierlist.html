@@ -143,7 +143,7 @@
     <div class="w-[95%] mx-auto bg-gray-800 p-4 rounded-lg">
       <div class="flex items-center justify-between mb-2">
         <h2 id="availableTitle" class="text-lg font-semibold">Available Items (0)</h2>
-        <div class="flex items-center gap-2">
+        <div id="languange" class="flex items-center gap-2">
           <label class="text-sm">Language:</label>
           <select id="langToggle" class="bg-gray-900 text-white rounded px-2 py-1 text-sm">
             <option value="jp">JP</option>
@@ -206,6 +206,10 @@
       function updateAvailableTitle() {
         const count = document.querySelectorAll("#availableItems > div").length;
         document.getElementById("availableTitle").textContent = `Available ${availableLabel}s (${count})`;
+      }
+
+      if (type === "member") {
+        document.getElementById("languange").classList.add("hidden");
       }
 
       // Set bahasa awal dari localStorage
